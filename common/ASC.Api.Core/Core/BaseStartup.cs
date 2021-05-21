@@ -31,7 +31,9 @@ namespace ASC.Api.Core
         public virtual string[] LogParams { get; }
         public virtual JsonConverter[] Converters { get; }
         public virtual bool AddControllers { get; } = true;
+        public virtual bool AddControllersAsServices { get; } = false;
         public virtual bool ConfirmAddScheme { get; } = false;
+        public virtual bool AddAndUseSession { get; } = false;
         protected DIHelper DIHelper { get; }
 
         public BaseStartup(IConfiguration configuration, IHostEnvironment hostEnvironment)
@@ -46,9 +48,31 @@ namespace ASC.Api.Core
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
 
+            if(AddAndUseSession)
+                services.AddSession();
+
             DIHelper.Configure(services);
 
-            if (AddControllers)
+            if (AddControllersAsServices)
+            {
+                services.AddControllers().AddControllersAsServices()
+                    .AddXmlSerializerFormatters()
+                    .AddJsonOptions(options =>
+                    {
+                        options.JsonSerializerOptions.WriteIndented = false;
+                        options.JsonSerializerOptions.IgnoreNullValues = true;
+                        options.JsonSerializerOptions.Converters.Add(new ApiDateTimeConverter());
+
+                        if (Converters != null)
+                        {
+                            foreach (var c in Converters)
+                            {
+                                options.JsonSerializerOptions.Converters.Add(c);
+                            }
+                        }
+                    });
+            }
+            else if(AddControllers)
             {
                 services.AddControllers()
                     .AddXmlSerializerFormatters()
@@ -119,6 +143,9 @@ namespace ASC.Api.Core
             });
 
             app.UseRouting();
+
+            if (AddAndUseSession)
+                app.UseSession();
 
             app.UseAuthentication();
 

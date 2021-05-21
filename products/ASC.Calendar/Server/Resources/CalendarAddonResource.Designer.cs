@@ -77,5 +77,23 @@ namespace ASC.Calendar.Resources {
                 return ResourceManager.GetString("AddonName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sharing of calendars &amp; events.
+        /// </summary>
+        internal static string CalendarSharingSubscription {
+            get {
+                return ResourceManager.GetString("CalendarSharingSubscription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event reminders.
+        /// </summary>
+        internal static string EventAlertSubscription {
+            get {
+                return ResourceManager.GetString("EventAlertSubscription", resourceCulture);
+            }
+        }
     }
 }

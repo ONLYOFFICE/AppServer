@@ -262,7 +262,8 @@ namespace ASC.Core
 
         public string AuthenticateMe(Guid userId, List<Claim> additionalClaims = null)
         {
-            return AuthenticateMe(Authentication.GetAccountByID(TenantManager.GetCurrentTenant().TenantId, userId), additionalClaims);
+            var account = Authentication.GetAccountByID(TenantManager.GetCurrentTenant().TenantId, userId);
+            return AuthenticateMe(account, additionalClaims);
         }
 
         public void Logout()

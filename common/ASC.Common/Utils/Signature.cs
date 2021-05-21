@@ -67,7 +67,8 @@ namespace ASC.Common.Utils
         {
             try
             {
-                var payloadParts = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(signature)).Split('?');
+                var rightSignature = signature.Replace("\"", "");
+                var payloadParts = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(rightSignature)).Split('?');
                 if (GetHashBase64(payloadParts[1] + secret) == payloadParts[0])
                 {
                     //Sig correct

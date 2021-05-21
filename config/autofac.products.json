@@ -52,7 +52,7 @@
           "type": "ASC.Web.Core.IWebItem, ASC.Web.Core"
         }
       ],
-	  "instanceScope": "InstancePerLifetimeScope"
+      "instanceScope": "InstancePerLifetimeScope"
     }
   ]
 }

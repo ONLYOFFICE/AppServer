@@ -62,8 +62,8 @@ namespace ASC.Web.Core.Calendars
         public virtual TimeZoneInfo TimeZone { get; set; }
 
         public virtual CalendarContext Context { get; set; }
-        private AuthContext AuthContext { get; }
-        private TimeZoneConverter TimeZoneConverter { get; }
+        protected AuthContext AuthContext { get; }
+        protected TimeZoneConverter TimeZoneConverter { get; }
 
         #endregion
 

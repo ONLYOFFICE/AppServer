@@ -27,33 +27,18 @@
 using System;
 using System.Collections.Generic;
 
+using ASC.Common;
 using ASC.Core;
 
 namespace ASC.Web.Core.Calendars
 {
     public delegate List<BaseCalendar> GetCalendarForUser(Guid userId);
 
+    [Scope]
     public class CalendarManager
     {
-        public static CalendarManager Instance
-        {
-            get;
-            private set;
-        }
-
-        private readonly List<GetCalendarForUser> _calendarProviders;
-        private readonly List<BaseCalendar> _calendars;
-
-        static CalendarManager()
-        {
-            Instance = new CalendarManager();
-        }
-
-        private CalendarManager()
-        {
-            _calendars = new List<BaseCalendar>();
-            _calendarProviders = new List<GetCalendarForUser>();
-        }
+        private readonly List<GetCalendarForUser> _calendarProviders = new List<GetCalendarForUser>();
+        private readonly List<BaseCalendar> _calendars = new List<BaseCalendar>();
 
         public void RegistryCalendar(BaseCalendar calendar)
         {

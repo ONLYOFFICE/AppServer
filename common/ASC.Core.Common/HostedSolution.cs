@@ -41,6 +41,7 @@ using Microsoft.Extensions.Options;
 
 namespace ASC.Core
 {
+    [Scope]
     class ConfigureHostedSolution : IConfigureNamedOptions<HostedSolution>
     {
         private UserFormatter UserFormatter { get; }
