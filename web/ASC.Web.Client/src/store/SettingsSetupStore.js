@@ -10,6 +10,7 @@ class SettingsSetupStore {
       logoUrls: [],
     },
   };
+
   security = {
     accessRight: {
       options: [],
@@ -23,6 +24,11 @@ class SettingsSetupStore {
   integration = {
     consumers: [],
     selectedConsumer: {},
+  };
+
+  statistic = {
+    quota: {},
+    visits: [],
   };
 
   constructor() {
@@ -63,6 +69,14 @@ class SettingsSetupStore {
 
   setConsumers = (consumers) => {
     this.integration.consumers = consumers;
+  };
+
+  setQuota = (quota) => {
+    this.statistic.quota = quota;
+  };
+
+  setVisits = (visits) => {
+    this.statistic.visits = visits;
   };
 
   setSelectedConsumer = (selectedConsumerName) => {
@@ -200,6 +214,16 @@ class SettingsSetupStore {
 
   sendOwnerChange = (id) => {
     return api.settings.sendOwnerChange(id);
+  };
+
+  getQuota = async () => {
+    const res = await api.settings.getPortalQuota();
+    if (res) this.setQuota(res);
+  };
+
+  getVisits = async (fromDate, toDate) => {
+    const res = await api.settings.getPortalVisits(fromDate, toDate);
+    if (res) this.setVisits(res);
   };
 }
 

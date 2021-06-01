@@ -112,7 +112,6 @@
   "PortalAdmins": "Portal admins",
   "PortalAdminsDescription": "Have the same access rights as the portal owner, except the right to: change portal owner; deactivate or delete portal.",
   "ConfirmEmailSended": "Confirmation e-mail has been sent to {{ownerName}}",
- 
 
   "TeamTemplate": "Team template",
   "TeamTemplateSettingsDescription": "Team Template is a customizable way to name the organization (or group), its members and their activities. Drop down the Template list to choose one of the available presets or enter the names yourselves selecting the custom option from the list.",
@@ -128,5 +127,15 @@
   "Guest": "Guest",
   "Guests": "Guests",
 
-  "EmptyFieldError": "Empty field"
+  "EmptyFieldError": "Empty field",
+
+  "VisitsGraph": "Visits graph",
+  "Visits": "Visits",
+  "VisitsWeek": "Week",
+  "VisitsMonth": "Month",
+  "VisitsThreeMonth": "3 month",
+  "VisitsPeriod": "Period",
+  "ActiveUsers": "Active users: {{current}} of {{total}}",
+  "StorageTitle": "Storage",
+  "StorageInfo": "To increase storage space select an upgraded pricing plan. To free the storage space, you can delete the personal data of the disabled users. To do this, go to the user profile and select the 'Delete personal data' action from the drop-down menu to the right of the name."
 }

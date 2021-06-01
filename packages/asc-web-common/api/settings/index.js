@@ -249,3 +249,18 @@ export function updateConsumerProps(newProps) {
 
   return request(options);
 }
+
+export function getPortalQuota() {
+  return request({
+    method: "get",
+    url: `/settings/quota`,
+  });
+}
+
+export function getPortalVisits(fromDate, toDate) {
+  const options = {
+    method: "get",
+    url: `/settings/statistics/visit?fromDate=${fromDate}&toDate=${toDate}`,
+  };
+  return request(options);
+}

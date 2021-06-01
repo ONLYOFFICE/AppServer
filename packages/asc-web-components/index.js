@@ -61,3 +61,4 @@ export { default as SaveCancelButtons } from "./save-cancel-buttons";
 export { default as DragAndDrop } from "./drag-and-drop";
 export * as Themes from "./themes";
 export { default as Portal } from "./portal";
+export { default as Chart } from "./chart";
