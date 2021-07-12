@@ -1,0 +1,306 @@
+{
+    "storage": {
+      "appender": [
+        {
+          "name": "generic",
+          "append": "~/"
+        }
+      ],
+      "handler": [
+        {
+          "name": "s3",
+          "type": "ASC.Data.Storage.S3.S3Storage, ASC.Data.Storage",
+          "property": [
+
+            {
+              "name": "acesskey",
+              "value": ""
+            },
+            {
+              "name": "secretaccesskey",
+              "value": ""
+            },
+            {
+              "name": "bucket",
+              "value": ""
+            },
+            {
+              "name": "region",
+              "value": ""
+            },
+            {
+              "name": "cname",
+              "value": ""
+            },
+            {
+              "name": "recycleDir",
+              "value": "recycle"
+            }
+          ]
+        },
+        {
+          "name": "disc",
+          "type": "ASC.Data.Storage.DiscStorage.DiscDataStore, ASC.Data.Storage",
+          "property": [
+            {
+              "name": "$STORAGE_ROOT",
+              "value": "..\\Data\\"
+            }
+          ]
+        }
+      ],
+      "module": [
+        {
+          "name": "forum",
+          "data": "853B6EB9-73EE-438d-9B09-8FFEEDF36234",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Forum\\Data\\attachments",
+          "virtualpath": "~/products/community/modules/forum/data/attachments",
+          "expires": "0:10:0"
+        },
+        {
+          "name": "bookmarking",
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Bookmarking\\Data\\images",
+          "virtualpath": "~/products/community/modules/bookmarking/data/images"
+        },
+        {
+          "name": "wiki",
+          "data": "742CF945-CBBC-4a57-82D6-1600A12CF8CA",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Wiki\\Data\\files",
+          "virtualpath": "~/products/community/modules/wiki/data/files",
+          "expires": "0:10:0",
+          "domain": [
+            {
+              "name": "temp",
+              "visible": false,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Wiki\\Data\\filestemp",
+              "virtualpath": "~/products/community/modules/wiki/data/filestemp"
+            }
+          ]
+        },
+        {
+          "name": "files",
+          "data": "e67be73d-f9ae-4ce1-8fec-1880cb518cb4",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Products\\Files",
+          "expires": "0:16:0",
+          "domain": [
+            {
+              "name": "files_temp",
+              "visible": false,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Files\\{0}\\temp",
+              "virtualpath": "~/products/community/modules/wiki/data/filestemp",
+              "expires": "0:10:0"
+            }
+          ]
+        },
+        {
+          "name": "files_template",
+          "visible": true,
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "disc",
+          "path": "DocStore",
+          "virtualpath": "~/products/files/docstore",
+          "appendTenantId": false,
+          "public": true,
+          "disableMigrate": true,
+      "disableEncryption": true
+        },
+        {
+          "name": "crm",
+          "data": "6743007C-6F95-4d20-8C88-A8601CE5E76D",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Products\\CRM\\Data",
+          "virtualpath": "~/products/crm/data",
+          "domain": [
+            {
+              "name": "export",
+              "visible": false,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\CRM\\Data\\{0}\\export",
+              "expires": "1.0:0:0"
+            },
+            {
+              "name": "temp",
+              "visible": false,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\CRM\\Data\\{0}\\temp"
+            },
+            {
+              "name": "mail_messages",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\CRM\\Data\\{0}\\mail_messages"
+            },
+            {
+              "name": "voip",
+              "visible": true,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\CRM\\Data\\{0}\\voip",
+              "virtualpath": "~/products/crm/data/{0}/voip",
+              "public": true
+            }
+          ]
+        },
+        {
+          "name": "crm_template",
+          "visible": false,
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "Products\\CRM\\DocStore",
+          "disableMigrate": true,
+          "disableEncryption": true
+        },
+        {
+          "name": "fckuploaders",
+          "count": false,
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\htmleditorfiles",
+          "virtualpath": "~/data/shared/htmleditorfiles",
+          "domain": [
+            {
+              "name": "mail",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\addons\\mail\\Data\\htmleditorfiles",
+              "virtualpath": "~/addons/mail/data/htmleditorfiles"
+            },
+            {
+              "name": "forum",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Forum\\Data\\htmleditorfiles",
+              "virtualpath": "~/products/community/modules/forum/data/htmleditorfiles"
+            },
+            {
+              "name": "news",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\News\\Data\\htmleditorfiles",
+              "virtualpath": "~/products/community/modules/news/data/htmleditorfiles"
+            },
+            {
+              "name": "news_comments",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\News\\Data\\fckcomments",
+              "virtualpath": "~/products/community/modules/news/data/fckcomments"
+            },
+            {
+              "name": "blogs",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Blogs\\Data\\htmleditorfiles",
+              "virtualpath": "~/products/community/modules/blogs/data/htmleditorfiles"
+            },
+            {
+              "name": "blogs_comments",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Blogs\\Data\\fckcomments",
+              "virtualpath": "~/products/community/modules/blogs/data/fckcomments"
+            },
+            {
+              "name": "bookmarking_comments",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Bookmarking\\data\\fckcomments",
+              "virtualpath": "~/products/community/modules/bookmarking/data/fckcomments"
+            },
+            {
+              "name": "wiki_comments",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Community\\Modules\\Wiki\\Data\\fckcomments",
+              "virtualpath": "~/products/community/modules/wiki/data/fckcomments"
+            },
+            {
+              "name": "projects_comments",
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Products\\Projects\\Data\\fckcomments",
+              "virtualpath": "~/products/projects/data/fckcomments"
+            }
+          ]
+        },
+        {
+          "name": "talk",
+          "data": "BF88953E-3C43-4850-A3FB-B1E43AD53A3E",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\addons\\talk\\Data",
+          "virtualpath": "~/addons/talk/data"
+        },
+        {
+          "name": "certs",
+          "visible": "false",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\certs\\",
+          "appendTenantId": false,
+      "disableEncryption": true
+        },
+        {
+          "name": "mailaggregator",
+          "data": "666ceac1-4532-4f8c-9cba-8f510eca2fd1",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\addons\\mail\\Data\\aggregator",
+          "virtualpath": "~/addons/mail/data/aggregator"
+        },
+        {
+          "name": "logo",
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\{0}\\logo",
+          "virtualpath": "~/studio/{0}/logo",
+          "public": true
+        },
+        {
+          "name": "whitelabel",
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\{0}\\CoBranding",
+          "virtualpath": "~/studio/{0}/cobranding",
+          "public": true
+        },
+        {
+          "name": "backup",
+          "visible": false,
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\{0}\\backup",
+          "virtualpath": "~/studio/{0}/backup",
+          "expires": "0:10:0",
+      "disableEncryption": true
+        },
+        {
+          "name": "customnavigation",
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\{0}\\customnavigation",
+          "virtualpath": "~/studio/{0}/customnavigation"
+        },
+        {
+          "name": "userPhotos",
+          "count": false,
+          "data": "00000000-0000-0000-0000-000000000000",
+          "type": "s3",
+          "path": "$STORAGE_ROOT\\Studio\\{0}\\userphotos",
+          "virtualpath": "~/studio/{0}/userphotos",
+          "domain": [
+            {
+              "name": "temp",
+              "visible": false,
+              "data": "00000000-0000-0000-0000-000000000000",
+              "path": "$STORAGE_ROOT\\Studio\\{0}\\userphotos\\temp",
+              "virtualpath": "~/studio/{0}/userphotos/temp"
+            }
+          ]
+        },
+        {
+          "name": "static_partnerdata",
+          "type": "s3",
+          "path": "App_Data\\static\\partnerdata",
+          "acl": "Read",
+          "virtualpath": "~/App_Data/static/partnerdata",
+          "appendTenantId": false,
+          "public": true,
+          "disableMigrate": true,
+          "disableEncryption": true
+        }
+      ]
+    }
+  }
