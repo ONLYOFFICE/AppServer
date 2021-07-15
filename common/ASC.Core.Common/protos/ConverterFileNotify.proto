@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+package ASC.Web.Files.Utils;
+
+message ConverterFileNotify {
+    string Id = 1;
+    OperationResult OperationResult = 2;
+}
+
+message OperationResult {
+     string Id = 1;
+     OperationType OperationType = 2;
+     string Processed = 3;
+     string Source = 4;
+     string Result = 5;
+     string Error = 6;
+     int32 Progress = 7;
+     bool Finished = 8;
+}
+
+enum OperationType{
+     Move = 0;
+     Copy = 1;
+     Delete = 2;
+     Download = 3;
+     MarkAsRead = 4;
+     Import = 5;
+     Convert = 6;
+}

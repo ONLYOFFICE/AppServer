@@ -30,6 +30,7 @@
   <ItemGroup>
     <None Remove="protos\AzRecordCache.proto" />
     <None Remove="protos\ConsumerCacheItem.proto" />
+    <None Remove="protos\ConverterFileNotify.proto" />
     <None Remove="protos\CreateClientProto.proto" />
     <None Remove="protos\DisableClientProto.proto" />
     <None Remove="protos\EncryptionSettingsProto.proto" />
@@ -60,6 +61,7 @@
     <PackageReference Include="Telegram.Bot" Version="15.7.1" />
   </ItemGroup>
   <ItemGroup>
+    <Protobuf Include="protos\ConverterFileNotify.proto" />
     <Protobuf Include="protos\CreateClientProto.proto" />
     <Protobuf Include="protos\EncryptionSettingsProto.proto" />
     <Protobuf Include="protos\NotifyInvoke.proto" />
