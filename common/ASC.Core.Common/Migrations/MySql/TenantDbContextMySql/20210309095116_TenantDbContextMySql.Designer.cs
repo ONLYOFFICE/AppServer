@@ -586,8 +586,7 @@ namespace ASC.Core.Common.Migrations.MySql.TenantDbContextMySql
                         {
                             UserId = "66faa6e4-f133-11ea-b126-00ffeec8b4ef",
                             LastModified = new DateTime(2021, 3, 9, 9, 51, 15, 581, DateTimeKind.Utc).AddTicks(9172),
-                            PwdHash = "vLFfghR5tNV3K9DKhmwArV+SbjWAcgZZzIDTnJ0JgCo=",
-                            PwdHashSha512 = "USubvPlB+ogq0Q1trcSupg==",
+                            PwdHash = "jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=",
                             Tenant = 1
                         });
                 });

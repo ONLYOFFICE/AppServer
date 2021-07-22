@@ -75,7 +75,7 @@ namespace ASC.Core.Common.Migrations.MySql.WebstudioDbContextMySql
                             TenantId = 1,
                             Id = "9a925891-1f92-4ed7-b277-d6f649739f06",
                             UserId = "00000000-0000-0000-0000-000000000000",
-                            Data = "{'Completed':false}"
+                            Data = "{\"Completed\":false}"
                         });
                 });
 

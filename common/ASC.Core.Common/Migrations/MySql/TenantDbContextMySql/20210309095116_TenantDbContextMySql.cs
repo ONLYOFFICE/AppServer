@@ -230,8 +230,8 @@ namespace ASC.Core.Common.Migrations.MySql.TenantDbContextMySql
 
             migrationBuilder.InsertData(
                 table: "core_usersecurity",
-                columns: new[] { "userid", "pwdhash", "pwdhashsha512", "tenant" },
-                values: new object[] { "66faa6e4-f133-11ea-b126-00ffeec8b4ef", "vLFfghR5tNV3K9DKhmwArV+SbjWAcgZZzIDTnJ0JgCo=", "USubvPlB+ogq0Q1trcSupg==", 1 });
+                columns: new[] { "userid", "pwdhash", "tenant" },
+                values: new object[] { "66faa6e4-f133-11ea-b126-00ffeec8b4ef", "jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg=", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "email",

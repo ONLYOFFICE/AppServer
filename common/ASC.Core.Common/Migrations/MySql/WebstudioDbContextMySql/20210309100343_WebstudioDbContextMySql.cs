@@ -60,7 +60,7 @@ namespace ASC.Core.Common.Migrations.MySql.WebstudioDbContextMySql
             migrationBuilder.InsertData(
                 table: "webstudio_settings",
                 columns: new[] { "ID", "TenantID", "UserID", "Data" },
-                values: new object[] { "9a925891-1f92-4ed7-b277-d6f649739f06", 1, "00000000-0000-0000-0000-000000000000", "{'Completed':false}" });
+                values: new object[] { "9a925891-1f92-4ed7-b277-d6f649739f06", 1, "00000000-0000-0000-0000-000000000000", "{\"Completed\":false}" });
 
             migrationBuilder.CreateIndex(
                 name: "ID",
