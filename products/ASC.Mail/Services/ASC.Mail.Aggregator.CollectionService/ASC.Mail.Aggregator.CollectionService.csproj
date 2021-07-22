@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="LiteDB" Version="5.0.10" />
+    <PackageReference Include="MailKit" Version="2.12.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="SelectelSharp" Version="0.8.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\common\ASC.Common\ASC.Common.csproj" />
+    <ProjectReference Include="..\..\..\..\common\ASC.Core.Common\ASC.Core.Common.csproj" />
+    <ProjectReference Include="..\..\..\..\common\ASC.Data.Encryption\ASC.Data.Encryption.csproj" />
+    <ProjectReference Include="..\..\..\..\common\ASC.Data.Storage\ASC.Data.Storage.csproj" />
+    <ProjectReference Include="..\..\..\..\common\services\ASC.ElasticSearch\ASC.ElasticSearch.csproj" />
+    <ProjectReference Include="..\..\Core\ASC.Mail.Core.csproj" />
+  </ItemGroup>
+
+</Project>

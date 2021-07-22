@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>mailer-daemon@googlemail.com</Email><Name>Mail Delivery Subsystem</Name></From><To><TestAddress><Email>mono.mail.4test@gmail.com</Email><Name /></TestAddress></To><Cc /><Subject>Delivery Status Notification (Failure)</Subject><TextCharset>us-ascii</TextCharset><TextBody>
+** Address not found **
+
+Your message wasn't delivered to test.mail@qip.ru because the address couldn't be found or is unable to receive email.
+
+
+
+The response from the remote server was:
+550 5.7.1 No such user!
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody>
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+* {
+font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table cellpadding="0" cellspacing="0" class="email-wrapper" style="padding-top:32px;background-color:#ffffff;"&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;table cellpadding=0 cellspacing=0&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style="max-width:560px;padding:24px 24px 32px;background-color:#fafafa;border:1px solid #e0e0e0;border-radius:2px"&gt;
+&lt;img style="padding:0 24px 16px 0;float:left" width=72 height=72 alt="Error Icon" src="cid:icon.png"&gt;
+&lt;table style="min-width:272px;padding-top:8px"&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;h2 style="font-size:20px;color:#212121;font-weight:bold;margin:0"&gt;
+Address not found
+&lt;/h2&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td style="padding-top:20px;color:#757575;font-size:16px;font-weight:normal;text-align:left"&gt;
+Your message wasn't delivered to &lt;a style='color:#212121;text-decoration:none'&gt;&lt;b&gt;test.mail@qip.ru&lt;/b&gt;&lt;/a&gt; because the address couldn't be found or is unable to receive email.
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style="border:none;background-color:#fff;font-size:12.8px;width:90%"&gt;
+&lt;td align="left" style="padding:48px 10px"&gt;
+The response from the remote server was:&lt;br/&gt;
+&lt;p style="font-family:monospace"&gt;
+550 5.7.1 No such user!
+&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</HtmlBody><AttachmentCount>3</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

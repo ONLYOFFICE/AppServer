@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>m46@mmm.ru</Email><Name /></From><To><TestAddress><Email>"38 &gt;&gt; m38"@mmm.ru</Email><Name /></TestAddress></To><Cc /><Subject>Test</Subject><TextCharset>utf-8</TextCharset><TextBody>test
+
+-------- Перенаправленное сообщение --------
+test
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody>&lt;html&gt;
+  &lt;head&gt;
+
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body bgcolor="#FFFFFF" text="#000000"&gt;
+    &lt;p&gt;&lt;br&gt;
+    &lt;/p&gt;
+    &lt;br&gt;
+    &lt;p&gt;Test&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</HtmlBody><AttachmentCount>0</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

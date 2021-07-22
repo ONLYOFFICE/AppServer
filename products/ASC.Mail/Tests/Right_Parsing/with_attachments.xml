@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>doctor@onlyomail.com</Email><Name>Safronov Alexey</Name></From><To><TestAddress><Email>profi.troll.4test@gmail.com</Email><Name /></TestAddress></To><Cc /><Subject>test with attachments</Subject><TextCharset>utf-8</TextCharset><TextBody>
+test with attachments
+
+
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody>&lt;p style="font-family:open sans,sans-serif; font-size:12px; margin: 0;"&gt;test with attachments&lt;/p&gt;
+
+</HtmlBody><AttachmentCount>9</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

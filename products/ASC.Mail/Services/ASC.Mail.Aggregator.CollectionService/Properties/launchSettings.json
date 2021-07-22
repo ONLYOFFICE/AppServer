@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "Kestrel WebServer": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "$STORAGE_ROOT": "../../../../../../../Data",
+        "log__dir": "../../../../../../../Logs",
+        "log__name": "mail.agg",
+        "ASPNETCORE_URLS": "http://localhost:5024",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "core__products__folder": "../../../../../../"
+      }
+    },
+    "WSL 2 : Ubuntu 20.04": {
+      "commandName": "WSL2",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "$STORAGE_ROOT": "../../../../../../../Data",
+        "log__dir": "../../../../../../../Logs",
+        "log__name": "mail.agg",
+        "ASPNETCORE_URLS": "http://localhost:5024",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "core__products__folder": "../../../../../../"
+      },
+      "distributionName": "Ubuntu-20.04"
+    }
+  }
+}

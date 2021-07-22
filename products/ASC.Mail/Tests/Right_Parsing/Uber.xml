@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>uber.russia@uber.com</Email><Name>Убер поступления</Name></From><To><TestAddress><Email>denis-my@t-online.de</Email><Name /></TestAddress></To><Cc /><Subject>Ваша вечерняя поездка с Uber, суббота</Subject><TextCharset>utf-8</TextCharset><TextBody /><HtmlCharset>utf-8</HtmlCharset><HtmlBody>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;!-- FILE: html_start.html.mako --&gt;
+      &lt;!-- FILE: head.html.mako --&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+
+      &lt;!-- See the README file for an explanation of this media hack --&gt;
+
+      
+
+      &lt;style&gt;
+
+  /* This is the ink framework media query section */
+  @media only screen and (max-width: 655px) {
+
+    table[class="body"] center {
+      min-width: 0 !important;
+    }
+
+    table[class="body"] .container {
+      width: 95% !important;
+    }
+
+    table[class="body"] .row {
+      width: 100% !important;
+      display: block !important;
+    }
+
+    table[class="body"] .wrapper {
+      display: block !important;
+      padding-right: 0 !important;
+    }
+
+    table[class="body"] .columns,
+    table[class="body"] .column {
+      table-layout: fixed !important;
+      float: none !important;
+      width: 100% !important;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+      display: block !important;
+    }
+
+    table[class="body"] .wrapper.first .columns,
+    table[class="body"] .wrapper.first .column {
+      display: table !important;
+    }
+
+    table[class="body"] table.columns td,
+    table[class="body"] table.column td {
+      width: 100% !important;
+    }
+
+    table[class="body"] td.offset-by-one,
+    table[class="body"] td.offset-by-two,
+    table[class="body"] td.offset-by-three,
+    table[class="body"] td.offset-by-four,
+    table[class="body"] td.offset-by-five,
+    table[class="body"] td.offset-by-six,
+    table[class="body"] td.offset-by-seven,
+    table[class="body"] td.offset-by-eight,
+    table[class="body"] td.offset-by-nine,
+    table[class="body"] td.offset-by-ten,
+    table[class="body"] td.offset-by-eleven {
+      padding-left: 0 !important;
+    }
+
+    table[class="body"] .expander {
+      width: 9999px !important;
+    }
+
+    table[class="body"] .right-text-pad,
+    table[class="body"] .text-pad-right {
+      padding-left: 10px !important;
+    }
+
+    table[class="body"] .left-text-pad,
+    table[class="body"] .text-pad-left {
+      padding-right: 10px !important;
+    }
+
+    table[class="body"] .hide-for-small,
+    table[class="body"] .show-for-desktop {
+      display: none !important;
+    }
+
+    table[class="body"] .show-for-small,
+    table[class="body"] .hide-for-desktop {
+      display: inherit !important;
+    }
+
+  }
+
+  @media print
+  {
+    .no-print-background
+    {
+        background: initial !important;
+    }
+  }
+&lt;/style&gt;
+
+
+      
+
+      &lt;style&gt;
+
+  @media only screen and (max-width: 665px) {
+    .header.not-grid, .main{
+      margin: 0 auto !important;
+      width: 304px !important;
+    }
+    .header.not-grid{
+      width: 100% !important;
+    }
+    .two-up td {
+      width: 100% !important;
+    }
+    .address {
+      display: block !important;
+    }
+    /* Scale each td to the full width below 600px */
+    table[class="container"] .block-grid td {
+      width: 100% !important;
+    }
+    /* When we actually want tabular data, don't scale it */
+    table[class="container"] .block-grid td table.not-grid td {
+      width: auto !important;
+    }
+    .header-greeting{
+      text-align: center !important;
+    }
+    .header-price{
+      text-align: center !important;
+      padding: 20px 0 0  0 !important;
+    }
+    .header-greeting .header-text{
+      padding-right: 0 !important;
+      line-height: 21px !important;
+      text-align: center !important;
+    }
+    .header-greeting img{
+      float: none !important;
+      margin: 0 0 -7px 0 !important;
+    }
+    .block-grid td.header-greeting{
+      padding: 5px 0 20px 0  !important;
+    }
+    .header-fare{
+      padding-left: 0 !important;
+      text-align: center !important;
+    }
+    .block-grid td.trip-info{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .route-map, .trip-box{
+      width: 100% !important;
+      height: auto !important;
+      border-right: 0 !important;
+      border-left: 0 !important;
+    }
+    .trip-info-table{
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    table[class="container"] .block-grid td.stats-holder{
+      width: 310px !important;
+    }
+    .block-grid td.trip-info{
+      padding-top: 0 !important;
+    }
+    .block-grid td.fare-details{
+      padding: 0 !important;
+    }
+    .breakdown{
+      padding: 10px 22px 40px 22px !important;
+    }
+    table[class="container"] .block-grid table.not-grid td.driver-photo{
+      width: 100% !important;
+      display: inline-block !important;
+      text-align: center !important;
+      padding-bottom: 5px !important;
+    }
+    .driver-photo img{
+      float: none !important;
+    }
+    table[class="container"] .block-grid td table.not-grid td.vertical-line {
+      width: 12px !important;
+    }
+    .trip-box.bottom{
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      border-radius: 0 !important;
+    }
+    table.driver-info-table {
+      display: inline-table !important;
+    }
+    table[class="container"] .block-grid table.not-grid td.driver-info{
+      display: inline-block !important;
+      width: 100% !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+    .block-grid td.driver-area{
+      padding: 0 0 15px !important;
+      background: #fafafa !important;
+      border-bottom: 1px solid #f0f0f0 !important;
+    }
+    .block-grid td.driver-area .not-grid {
+      width: 100% !important;
+    }
+    .block-grid td.rating-area{
+      text-align: center !important;
+      background: #fafafa !important;
+      padding: 25px 0 !important;
+      line-height: 25px;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+    }
+    .fare-details {
+      width: 100% !important;
+    }
+    .etd-full-width {
+      width: 302px !important;
+    }
+    .rating-area img{
+      float: none !important;
+      margin: 0 5px !important;
+    }
+    .rate-text{
+      display: block !important;
+      text-align: center !important;
+      padding: 0 !important;
+    }
+    .rating-table{
+      padding: 10px 0px 13px 0px !important;
+    }
+    table.rating-table tr.rating-note-section {
+      text-align: center !important;
+    }
+    table.rating-table td.rating-note {
+      padding: 0 !important;
+    }
+    .bottom-box, .bottom-box.first{
+      padding-left: 0 !important;
+      margin: 0 !important;
+      padding-right: 0 !important;
+    }
+    .compliance-item{
+      text-align: center !important;
+    }
+    .bottom-box.first{
+      padding: 50px 0 25px !important;
+    }
+    .bottom-box .help-photo img, .bottom-box .share-photo img{
+      margin: 0 10px 0 2px !important;
+    }
+    .block-grid, .header.not-grid {
+      max-width: 304px !important;
+      margin: 0 auto !important;
+    }
+    .driver-photo img.user-photo{
+      margin: 0 !important;
+    }
+    .address{
+      line-height: 12px !important;
+    }
+    .block-grid td.time-section {
+      line-height: 16px !important;
+    }
+    .block-grid .bottom-box.first td.help-info {
+      border: 0 !important;
+    }
+    tr.share-section td.med-width{
+      width: 60% !important;
+      padding-top: 5px !important;
+    }
+    img.share-icons{
+      padding: 3px 3px 0 12px !important;
+    }
+    .bottom-box .not-grid td.share-photo {
+      width: 25px  !important;
+    }
+    .block-grid td.header-price {
+      -webkit-border-radius: 3px 3px 0 0 !important;
+      -moz-border-radius: 3px 3px 0 0 !important;
+      border-radius: 3px 3px 0 0 !important;
+    }
+    .block-grid td.header-price, .block-grid td.header-greeting{
+      background: #fff !important;
+    }
+    .block-grid table .not-grid.breakdown-title{
+      width: 100% !important;
+    }
+    .bottom-box .not-grid td.help-photo{
+      width: 50px !important;
+    }
+    table[class="container"] .block-grid td table.not-grid td.fare-header{
+        width: 120px !important;
+    }
+    table.rating-table tr.rating-section {
+      text-align: center !important;
+    }
+    .rating-wrap{
+      width: 100% !important;
+    }
+    table.rating-table .star-td-section {
+      text-align: center !important;
+    }
+    .banner-td{
+      border-bottom: 0;
+      border-top: 1px solid #F0F0F0;
+    }
+    .banner-td img.return-warning-icon {
+      margin-top: 0 !important;
+    }
+    table[class="container"] .block-grid td table td.banner-left{
+      width: inherit !important;
+      padding: 10px !important;
+      line-height: 16px !important;
+    }
+    table[class="container"] .block-grid td table td.banner-image{
+      padding-right: 8px !important;
+    }
+  }
+
+  /* Non-media query hacks */
+
+  /* Override style for time/addresses in iOS */
+  .time a{
+    text-decoration: none !important;
+    color: #000000   !important;
+  }
+  .address a, .issued a {
+    color: #959595   !important;
+    text-decoration: none;
+  }
+  /* Override banner arrears anchor tag color */
+  .banner-arrears a, .banner-arrears a:visited{
+    color: #FFFFFF !important;
+  }
+
+&lt;/style&gt;
+
+
+  &lt;/head&gt;
+&lt;!-- FILE: body_start.html.mako --&gt;
+&lt;body class="background no-print-background" style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #222222; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px; background-image: url(http://uber-static.s3.amazonaws.com/receipt-new/grid_dark.png); background-color: #111125; margin: 0; padding: 0;" bgcolor="#111125"&gt;&lt;style type="text/css"&gt;
+a:hover { color: #2795b6 !important; }
+a:active { color: #2795b6 !important; }
+a:visited { color: #2ba6cb !important; }
+h1 a:active { color: #2ba6cb !important; }
+h2 a:active { color: #2ba6cb !important; }
+h3 a:active { color: #2ba6cb !important; }
+h4 a:active { color: #2ba6cb !important; }
+h5 a:active { color: #2ba6cb !important; }
+h6 a:active { color: #2ba6cb !important; }
+h1 a:visited { color: #2ba6cb !important; }
+h2 a:visited { color: #2ba6cb !important; }
+h3 a:visited { color: #2ba6cb !important; }
+h4 a:visited { color: #2ba6cb !important; }
+h5 a:visited { color: #2ba6cb !important; }
+h6 a:visited { color: #2ba6cb !important; }
+table.button:hover td { background: #2795b6 !important; }
+table.button:visited td { background: #2795b6 !important; }
+table.button:active td { background: #2795b6 !important; }
+table.button:hover td a { color: #fff !important; }
+table.button:visited td a { color: #fff !important; }
+table.button:active td a { color: #fff !important; }
+table.button:hover td { background: #2795b6 !important; }
+table.tiny-button:hover td { background: #2795b6 !important; }
+table.small-button:hover td { background: #2795b6 !important; }
+table.medium-button:hover td { background: #2795b6 !important; }
+table.large-button:hover td { background: #2795b6 !important; }
+table.button:hover td a { color: #ffffff !important; }
+table.button:active td a { color: #ffffff !important; }
+table.button td a:visited { color: #ffffff !important; }
+table.tiny-button:hover td a { color: #ffffff !important; }
+table.tiny-button:active td a { color: #ffffff !important; }
+table.tiny-button td a:visited { color: #ffffff !important; }
+table.small-button:hover td a { color: #ffffff !important; }
+table.small-button:active td a { color: #ffffff !important; }
+table.small-button td a:visited { color: #ffffff !important; }
+table.medium-button:hover td a { color: #ffffff !important; }
+table.medium-button:active td a { color: #ffffff !important; }
+table.medium-button td a:visited { color: #ffffff !important; }
+table.large-button:hover td a { color: #ffffff !important; }
+table.large-button:active td a { color: #ffffff !important; }
+table.large-button td a:visited { color: #ffffff !important; }
+table.secondary:hover td { background: #d0d0d0 !important; color: #555 !important; }
+table.secondary:hover td a { color: #555 !important; }
+table.secondary td a:visited { color: #555 !important; }
+table.secondary:active td a { color: #555 !important; }
+table.success:hover td { background: #457a1a !important; }
+table.alert:hover td { background: #970b0e !important; }
+.time a:visited { font-size: 15px !important; font-weight: 500 !important; color: #000000 !important; }
+.address a:visited { font-size: 11px !important; color: #999999 !important; line-height: 16px !important; text-decoration: none !important; }
+.block-grid td.help-info .issued a:visited { font-size: 11px !important; text-decoration: underline !important; color: #b2b2b2 !important; }
+.driver-header-text a:visited { text-decoration: underline !important; color: #1fbad6 !important; }
+.driver-signup-link:hover { cursor: pointer !important; }
+&amp;gt;&lt;/style&gt;
+    &lt;table class="body" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #222222; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;"&gt;
+      &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+        &lt;td class="center" align="center" valign="top" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; padding: 0;"&gt;
+          &lt;center style="width: 100%; min-width: 580px;"&gt;
+
+&lt;!-- FILE: content_start.html.mako --&gt;
+            &lt;table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 660px; margin: 0 auto; padding: 0;"&gt;
+              &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                &lt;td style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; padding: 0;" align="left" valign="top"&gt;
+
+                &lt;!-- FILE: banner.html.mako --&gt;
+                  &lt;table class="header not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 640px; margin: 0 10px; padding: 0;"&gt;
+                    &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                      &lt;td class="logo" width="127" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; padding: 28px 0;" align="left" valign="top"&gt;
+                        &lt;img width="127" height="19" id="cid_uber_logo" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/logo-updated-white.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block;" align="left" /&gt;
+                      &lt;/td&gt;
+                      &lt;td class="date-section" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; font-size: 11px; color: #999999; line-height: 15px; text-transform: uppercase; padding: 30px 0 26px;" align="right" valign="top"&gt;
+                        &lt;span class="date"&gt;16 июля 2016 г.&lt;/span&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+                  &lt;table class="block-grid main" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 640px; max-width: 640px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.20); -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.20); box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.20); background-color: #ffffff; margin: 0 10px; padding: 0;" bgcolor="#ffffff"&gt;
+                    &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                      &lt;td class="no-padding full-width" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 100%; padding: 0;" align="left" valign="top"&gt;
+
+                        &lt;!-- Header and fare --&gt;
+
+                        &lt;table class="block-grid two-up divider header-table" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; max-width: 640px; border-bottom-width: 1px; border-bottom-color: #E3E3E3; border-bottom-style: solid; padding: 0;"&gt;
+                          &lt;tr class="grey" style="vertical-align: top; text-align: left; width: 100%; background-color: rgb(250,250,250); padding: 0;" align="left" bgcolor="rgb(250,250,250)"&gt;
+                            
+                            &lt;td class="header-price" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 299px; -webkit-border-radius: 3px 0 0 0; -moz-border-radius: 3px 0 0 0; border-radius: 3px 0 0 0; background-color: #FAFAFA; padding: 26px 10px 20px;" align="left" bgcolor="#FAFAFA" valign="top"&gt;
+                                &lt;span class="header-fare text-pad" style="font-weight: bold; font-size: 32px; color: #000; line-height: 30px; padding-left: 15px;"&gt;
+                                188,17 ₽
+                                &lt;/span&gt;
+                            &lt;!-- There cannot be a new line between these tds or some clients (e.g gecko based) freak out--&gt;
+                            &lt;/td&gt;&lt;td class="pull-right header-greeting" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: inline-block; width: 299px; -webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; border-radius: 0 3px 0 0; background-color: #FAFAFA; padding: 26px 10px 20px;" align="right" bgcolor="#FAFAFA" valign="top"&gt;
+                              
+    &lt;span class="header-text" style="padding-right: 15px; line-height: 10px; font-size: 13px; font-weight: normal; color: #b2b2b2;"&gt;Благодарим вас за выбор Uber, Denis&lt;/span&gt;
+
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+
+                        
+
+
+                        
+
+                        &lt;!-- Map and fare details --&gt;
+                        &lt;table class="block-grid two-up divider" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; max-width: 640px; border-bottom-width: 1px; border-bottom-color: #f0f0f0; border-bottom-style: solid; padding: 0;"&gt;
+                          &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+
+                            &lt;!-- Map + to/from --&gt;
+                            &lt;td class="trip-info" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 300px; padding: 25px 10px 25px 5px;" align="left" valign="top"&gt;
+                              &lt;table class="trip-info-table" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; margin-left: 19px; padding: 0;"&gt;
+                                  &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                                    &lt;td class="no-padding" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 300px; padding: 0;" align="left" valign="top"&gt;
+                                      &lt;img class="route-map" width="279" height="217" id="map_e585b735-49d2-4626-b89b-7099d73a00e8" src="cid:map_e585b735-49d2-4626-b89b-7099d73a00e8" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: none; clear: none; display: block; width: 279px; height: 217px; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; border: 1px solid #d7d7d7;" align="none" /&gt;
+                                    &lt;/td&gt;
+                                  &lt;/tr&gt;
+                                &lt;!-- etd --&gt;
+                                
+
+                                
+  &lt;tr class="trip-box trip-details" style="vertical-align: top; text-align: left; width: 279px; display: block; background-color: #FAFAFA; padding: 20px 0; border-color: #e3e3e3; border-style: solid; border-width: 1px 1px 0px;" align="left" bgcolor="#FAFAFA"&gt;
+    &lt;td class="no-padding" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 220px; padding: 0;" align="left" valign="top"&gt;
+      &lt;table class="not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: auto; padding: 0;"&gt;
+        &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td rowspan="4" class="vertical-line" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 17px !important; padding: 3px 18px 10px 17px;" align="left" valign="top"&gt;
+            &lt;img width="13" id="route" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/route.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block;" align="left" /&gt;
+          &lt;/td&gt;
+          &lt;td class="time-section" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 220px; line-height: 16px; height: 57px; padding: 0 10px 10px 0;" align="left" valign="top"&gt;
+            &lt;span class="from time" style="font-size: 15px; font-weight: 500; color: #000000 !important;"&gt;19:01&lt;/span&gt;&lt;br /&gt;
+            &lt;span class="address" style="font-size: 11px; color: #999999 !important; line-height: 16px; text-decoration: none;"&gt;ul. Yanki Kupaly, 2, Nizhnij Novgorod, Nizhegorodskaya oblast', Russia, 603123&lt;/span&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+
+
+        &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td class="time-section" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 220px; line-height: 16px; height: 57px; padding: 0 10px 10px 0;" align="left" valign="top"&gt;
+            &lt;span class="to time" style="font-size: 15px; font-weight: 500; color: #000000 !important;"&gt;19:42&lt;/span&gt;&lt;br /&gt;
+            &lt;span class="address" style="font-size: 11px; color: #999999 !important; line-height: 16px; text-decoration: none;"&gt;Verkhnepecherskaya ul., 8, Nizhnij Novgorod, Nizhegorodskaya oblast', Russia, 603087&lt;/span&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+                                
+  &lt;tr class="trip-box bottom" style="vertical-align: top; text-align: left; width: 279px; display: block; background-color: #FAFAFA; padding: 0; border: 1px solid #e3e3e3;" align="left" bgcolor="#FAFAFA"&gt;
+    &lt;td class="no-padding stats-holder" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell !important; width: 279px !important; padding: 0;" align="left" valign="top"&gt;
+      &lt;table class="trip-stats not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; color: #959595; line-height: 14px; padding: 0;"&gt;
+        &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td class="trip-box-data" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; display: table-cell !important; width: 33% !important; line-height: 16px; padding: 6px 10px 10px;" align="center" valign="top"&gt;
+            &lt;span class="label" style="font-size: 9px; text-transform: uppercase;"&gt;Автомобиль&lt;/span&gt;&lt;br /&gt;
+            &lt;span class="data" style="font-size: 13px; color: #111125; font-weight: normal;"&gt;uberSTART&lt;/span&gt;
+          &lt;/td&gt;
+            &lt;td class="trip-box-data" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; display: table-cell !important; width: 33% !important; line-height: 16px; padding: 6px 10px 10px;" align="center" valign="top"&gt;
+              &lt;span class="label" style="font-size: 9px; text-transform: uppercase;"&gt;километры&lt;/span&gt;&lt;br /&gt;
+              &lt;span class="data" style="font-size: 13px; color: #111125; font-weight: normal;"&gt;20.20&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td class="trip-box-data" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; display: table-cell !important; width: 33% !important; line-height: 16px; padding: 6px 10px 10px;" align="center" valign="top"&gt;
+              &lt;span class="label" style="font-size: 9px; text-transform: uppercase;"&gt;Время поездки&lt;/span&gt;&lt;br /&gt;
+              &lt;span class="data" style="font-size: 13px; color: #111125; font-weight: normal;"&gt;00:41:35&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+                              &lt;/table&gt;
+                            &lt;/td&gt;
+
+                            &lt;!-- Fare details --&gt;
+                            &lt;td class="fare-details" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 300px; padding: 10px;" align="left" valign="top"&gt;
+                              &lt;span class="breakdown" style="display: block; padding: 0px 8px 0 10px;"&gt;
+                                
+                                
+
+                                
+                                &lt;table class="breakdown-title not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100% !important; padding: 0;"&gt;
+                                  &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                                    &lt;td class="line left" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: middle; text-align: left; display: table-cell; width: auto !important; padding: 12px 0 5px;" align="left" valign="middle"&gt;&lt;p style="color: #222222; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: normal; text-align: left; line-height: 0; font-size: 14px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #E3E3E3; display: block; margin: 0; padding: 0;" align="left"&gt;&lt;/p&gt;&lt;/td&gt;
+                                      &lt;td class="fare-header" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: middle; text-align: center; display: table-cell; width: 120px !important; font-size: 11px; white-space: pre; padding: 12px 10px 5px;" align="center" valign="middle"&gt;РАЗБИВКА ТАРИФОВ&lt;/td&gt;
+                                    &lt;td class="line right" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: middle; text-align: left; display: table-cell; width: auto !important; padding: 12px 0 5px;" align="left" valign="middle"&gt;&lt;p style="color: #222222; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-weight: normal; text-align: left; line-height: 0; font-size: 14px; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #E3E3E3; display: block; margin: 0; padding: 0;" align="left"&gt;&lt;/p&gt;&lt;/td&gt;
+                                  &lt;/tr&gt;
+                                &lt;/table&gt;
+                                
+                                
+                                
+
+                                
+                                  &lt;table class="fare-details not-grid fare-breakdown" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; margin-top: 15px; width: auto; padding: 0;"&gt;
+
+                                    
+                                        
+
+
+        &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td class="line-item" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; color: #808080; padding: 4px;" align="left" valign="top"&gt;
+            Подача
+          &lt;/td&gt;
+          &lt;td class="price" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 90px; white-space: nowrap; padding: 4px;" align="right" valign="top"&gt;45,00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td class="line-item" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; color: #808080; padding: 4px;" align="left" valign="top"&gt;
+            Расстояние
+          &lt;/td&gt;
+          &lt;td class="price" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 90px; white-space: nowrap; padding: 4px;" align="right" valign="top"&gt;80,80&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="divider" style="vertical-align: top; text-align: left; border-bottom-width: 1px; border-bottom-color: #f0f0f0; border-bottom-style: solid; width: 100%; padding: 0;" align="left"&gt;
+          &lt;td class="line-item" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; color: #808080; padding: 4px 4px 15px;" align="left" valign="top"&gt;
+            Время
+          &lt;/td&gt;
+          &lt;td class="price" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 90px; white-space: nowrap; padding: 4px 4px 15px;" align="right" valign="top"&gt;62,37&lt;/td&gt;
+        &lt;/tr&gt;
+
+
+
+&lt;tr class="total" style="vertical-align: top; text-align: left; font-weight: bold; width: 100%; padding: 0;" align="left"&gt;
+  &lt;td class="line-item" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; color: #111125; padding: 15px 4px 4px;" align="left" valign="top"&gt;Промежуточный итог&lt;/td&gt;
+  &lt;td class="price" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 90px; white-space: nowrap; padding: 15px 4px 4px;" align="right" valign="top"&gt;188,17 ₽&lt;/td&gt;
+&lt;/tr&gt;
+
+
+
+                                    
+                                    
+                                    
+                                    &lt;tr class="divider final-total" style="vertical-align: top; text-align: left; border-bottom-width: 1px; border-bottom-color: #f0f0f0; border-bottom-style: solid; width: 100%; padding: 0;" align="left"&gt;
+                                        &lt;td class="line-item charged" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; color: #808080; line-height: 18px; padding: 15px 4px;" align="left" valign="top"&gt;
+                                            &lt;span class="charge-label" style="font-size: 9px; line-height: 7px;"&gt;СПИСАНО&lt;/span&gt;
+                                            &lt;br /&gt;
+                                              &lt;img id="mc_icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt/mastercard_24.png" class="card-image" width="17" height="12" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 17px !important; height: 12px; margin-right: 5px; margin-top: 3px;" align="left" /&gt;
+                                            &lt;span class="card-detail" style="font-size: 13px;"&gt;
+                                              Personal &amp;bull;&amp;bull;&amp;bull;&amp;bull; 9226
+                                            &lt;/span&gt;
+                                        &lt;/td&gt;
+                                          &lt;td class="price final-charge" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 90px; white-space: nowrap; font-size: 19px; font-weight: bold; line-height: 30px; padding: 26px 4px 15px;" align="right" valign="top"&gt;
+                                          188,17 ₽
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+
+                                  &lt;/table&gt;
+                                
+
+                                
+                                
+
+                                
+                                
+
+                                
+                                
+
+                                
+                                  &lt;table class="not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: auto; padding: 0;"&gt;
+                                    &lt;tr class="" style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                                      &lt;td class="client-savings" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; display: table-cell; width: 300px; font-size: 15px; padding: 16px 10px 0px;" align="center" valign="top"&gt;
+                                        &lt;span&gt;&lt;/span&gt;
+                                      &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                  &lt;/table&gt;
+                                
+
+                                
+                                
+
+                                
+                                    &lt;table class="memo-table not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100% !important; padding: 0;"&gt;
+                                      &lt;tr class="memo divider" style="vertical-align: top; text-align: center; border-bottom-width: 1px; border-bottom-color: #f0f0f0; border-bottom-style: solid; width: 300px; color: #666666; font-size: 12px; padding: 0;" align="center"&gt;
+                                        &lt;td class="memo-note" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center; display: table-cell; width: 300px; padding: 10px 0px;" align="center" valign="top"&gt;
+                                          &lt;span class="center" style="display: block; width: 100%; text-align: center;"&gt;
+                                            &lt;span&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h0/8vJUS-2BGFnoTYr4SDcohYjM1qlRiGzDBnBQ117FEsnLnLtDcXZAm7o4o5kY8fCDLzdHX-2BFZLdyajZNBPaEVarUPx0tXbCNRhjQv0JSN6E3kE-3D"&gt;Зайдите на страничку поездки&lt;/a&gt; для получения дополнительной информации, в том числе счетов (если имеются)&lt;/span&gt;
+                                          &lt;/span&gt;
+                                        &lt;/td&gt;
+                                      &lt;/tr&gt;
+                                    &lt;/table&gt;
+                                
+
+                                &lt;span class="trip_reference" style="line-height: 1px; font-size: 1px; color: #FFFFFF;"&gt;xide585b735-49d2-4626-b89b-7099d73a00e8&lt;/span&gt;
+                                &lt;br /&gt;
+                                &lt;span class="zd_receipt_identifier" style="line-height: 1px; font-size: 1px; color: #FFFFFF;"&gt;pGvlI2ANUbXFfyEOgxta1RMV082993&lt;/span&gt;
+                              &lt;/span&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+
+                        &lt;table class="block-grid two-up divider" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; max-width: 640px; border-bottom-width: 1px; border-bottom-color: #f0f0f0; border-bottom-style: solid; padding: 0;"&gt;
+                          &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                            
+                              &lt;td class="driver_block" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 50%; padding: 0px;" align="left" valign="top"&gt;
+                                  
+                          &lt;!-- Driver and stats --&gt;
+                          &lt;table class="block-grid driver-info-table" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; max-width: 640px; display: inline-block; padding: 0;"&gt;
+                            &lt;tr class="driver-section" style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                              &lt;td class="driver-area" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 100% !important; line-height: 15px; padding: 0px 0px 0px 10px;" align="left" valign="top"&gt;
+                                &lt;table class="not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: auto; padding: 0;"&gt;
+                                  &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                                    &lt;td class="driver-photo" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 45px; padding: 22px 0px 20px;" align="left" valign="top"&gt;&lt;img class="user-photo" width="45" height="45" id="driver_e585b735-49d2-4626-b89b-7099d73a00e8" src="https://d1w2poirtb3as9.cloudfront.net/8e62f7279547711abde7.jpeg" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: inline-block; width: 45px !important; height: 45px !important; -webkit-border-radius: 50em; -moz-border-radius: 50em; border-radius: 50em; margin-top: -1px; margin-left: 15px; max-width: 45px !important; min-width: 45px !important; border: 1px solid #d7d7d7;" align="left" /&gt;&lt;/td&gt;
+                                    &lt;td class="driver-info" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: middle; text-align: left; display: table-cell; width: 300px; padding: 22px 10px 20px;" align="left" valign="middle"&gt;
+                                        &lt;span class="driver-header-text" style="padding-bottom: 5px; display: inline-block;"&gt;Вы ехали с Александр&lt;/span&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    &lt;/td&gt;
+                                  &lt;/tr&gt;
+                                &lt;/table&gt;
+                              &lt;/td&gt;
+                            &lt;/tr&gt;
+                          &lt;/table&gt;
+
+                              &lt;/td&gt;
+                            
+                            &lt;td class="rating_block" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 50%; height: 100%; padding: 10px 0px 0px;" align="left" valign="top"&gt;
+                              
+    &lt;!-- Rating section --&gt;
+&lt;table class="block-grid rating-table" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; max-width: 640px; display: block; padding: 0px;"&gt;
+  &lt;tbody class="rating-table-body" style="width: 100%; display: block;"&gt;
+    &lt;tr class="rating-note-section" style="vertical-align: top; text-align: right; width: 100%; display: inline-block; padding: 6px 0 0;" align="right"&gt;
+     &lt;td class="rating-note" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: inline; width: auto; font-size: 9px; color: #b2b2b2; text-transform: uppercase; padding: 0px 15px 0px 0px;" align="right" valign="top"&gt;&lt;span&gt;Оцените водителя&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class="rating-section" style="vertical-align: top; text-align: right; width: 100%; display: block; padding: 0px;" align="right"&gt;
+      &lt;td class="star-td-section" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 136px; padding: 5px 10px 5px 0px;" align="left" valign="top"&gt;
+        &lt;span class="rating-star" style="font-size: 11px; width: 20px !important; height: 20px; display: inline-block !important; padding: 0px 2px;"&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h1/8vJUS-2BGFnoTYr4SDcohYjMvkNij4bf2M3oDlYwPBs3E6pc2-2BbaZ-2B6QgFOdnpUGLVQ5tjLayg9NlVAHRCqWMZP9rCnwJ6i-2B-2FSveb-2B-2FnIyCj5qdy7tx9ZHz4-2FRlLG6lNJaRHQ3JLbM1qp95KUPvYf-2Fp-2B7akJuoOWFugGWqSZJDBQZUt4v-2B7K4O88rfY5OCQhWDe2pW8ov2UQBeoTbCOWPBTrrwBy-2B8HpQJp0kEB-2F8qxcc-3D" style="color: #2ba6cb; text-decoration: none;"&gt;&lt;img class="star-icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/star@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 20px; border: none;" align="left" /&gt;&lt;/a&gt;&lt;/span&gt;
+        &lt;span class="rating-star" style="font-size: 11px; width: 20px !important; height: 20px; display: inline-block !important; padding: 0px 2px;"&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h2/8vJUS-2BGFnoTYr4SDcohYjMvkNij4bf2M3oDlYwPBs3E6pc2-2BbaZ-2B6QgFOdnpUGLVQ5tjLayg9NlVAHRCqWMZP9rCnwJ6i-2B-2FSveb-2B-2FnIyCj5qdy7tx9ZHz4-2FRlLG6lNJaRHQ3JLbM1qp95KUPvYf-2Fp-2B7akJuoOWFugGWqSZJDBQZUt4v-2B7K4O88rfY5OCQhWDe2pW8ov2UQBeoTbCOWPBTjtP1akEgTY88nArxRc-2Bg08-3D" style="color: #2ba6cb; text-decoration: none;"&gt;&lt;img class="star-icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/star@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 20px; border: none;" align="left" /&gt;&lt;/a&gt;&lt;/span&gt;
+        &lt;span class="rating-star" style="font-size: 11px; width: 20px !important; height: 20px; display: inline-block !important; padding: 0px 2px;"&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h3/8vJUS-2BGFnoTYr4SDcohYjMvkNij4bf2M3oDlYwPBs3E6pc2-2BbaZ-2B6QgFOdnpUGLVQ5tjLayg9NlVAHRCqWMZP9rCnwJ6i-2B-2FSveb-2B-2FnIyCj5qdy7tx9ZHz4-2FRlLG6lNJaRHQ3JLbM1qp95KUPvYf-2Fp-2B7akJuoOWFugGWqSZJDBQZUt4v-2B7K4O88rfY5OCQhWDe2pW8ov2UQBeoTbCOWPBToPMmOdzxxkp219Efgtsn1g-3D" style="color: #2ba6cb; text-decoration: none;"&gt;&lt;img class="star-icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/star@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 20px; border: none;" align="left" /&gt;&lt;/a&gt;&lt;/span&gt;
+        &lt;span class="rating-star" style="font-size: 11px; width: 20px !important; height: 20px; display: inline-block !important; padding: 0px 2px;"&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h4/8vJUS-2BGFnoTYr4SDcohYjMvkNij4bf2M3oDlYwPBs3E6pc2-2BbaZ-2B6QgFOdnpUGLVQ5tjLayg9NlVAHRCqWMZP9rCnwJ6i-2B-2FSveb-2B-2FnIyCj5qdy7tx9ZHz4-2FRlLG6lNJaRHQ3JLbM1qp95KUPvYf-2Fp-2B7akJuoOWFugGWqSZJDBQZUt4v-2B7K4O88rfY5OCQhWDe2pW8ov2UQBeoTbCOWPBTgS6KVW2p-2BiCzoldemfj2co-3D" style="color: #2ba6cb; text-decoration: none;"&gt;&lt;img class="star-icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/star@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 20px; border: none;" align="left" /&gt;&lt;/a&gt;&lt;/span&gt;
+        &lt;span class="rating-star" style="font-size: 11px; width: 20px !important; height: 20px; display: inline-block !important; padding: 0px 2px;"&gt;&lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h5/8vJUS-2BGFnoTYr4SDcohYjMvkNij4bf2M3oDlYwPBs3E6pc2-2BbaZ-2B6QgFOdnpUGLVQ5tjLayg9NlVAHRCqWMZP9rCnwJ6i-2B-2FSveb-2B-2FnIyCj5qdy7tx9ZHz4-2FRlLG6lNJaRHQ3JLbM1qp95KUPvYf-2Fp-2B7akJuoOWFugGWqSZJDBQZUt4v-2B7K4O88rfY5OCQhWDe2pW8ov2UQBeoTbCOWPBTgPoa72wUbuICib6YhcCgig-3D" style="color: #2ba6cb; text-decoration: none;"&gt;&lt;img class="star-icon" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/star@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; width: 20px; border: none;" align="left" /&gt;&lt;/a&gt;&lt;/span&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+
+&lt;!-- FILE: content_end.html.mako --&gt;                
+                &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+
+  &lt;!-- FILE: boxes.html.mako --&gt;
+                  &lt;table class="container block-grid two-up footer" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 640px; max-width: 640px; margin: 0 auto; padding: 0;"&gt;
+                    &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                      &lt;td class="bottom-box first" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 319px !important; height: 35px; font-size: 12px; padding: 25px 0 40px;" align="left" valign="top"&gt;
+                        &lt;table class="not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;"&gt;
+                          &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                            &lt;td class="help-photo" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 25px; padding: 7px 9px 7px 3px;" align="left" valign="top"&gt;&lt;img id="cid_support" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/support@2x.png" width="45" height="41" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; margin-right: 7px;" align="left" /&gt;&lt;/td&gt;
+&lt;td class="help-info" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; line-height: 16px; color: #1fbad6; font-size: 14px; border-right-color: #414151; border-right-width: 1px; border-right-style: solid; padding: 4px 0 0;" align="left" valign="top"&gt;
+  &lt;span class="driver-header-text" style="padding-bottom: 5px; display: inline-block;"&gt;Нужна помощь?&lt;/span&gt;
+  &lt;span class="issued" style="font-size: 11px; color: #b2b2b2; display: inline-block;"&gt;Нажмите "Помощь" в приложении, чтобы &lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h6/yun2F4xRPusTdxOSSrF142aRcvMnx0lZqHds9ZbLgKs-3D" style="color: #b2b2b2 !important; text-decoration: underline; font-size: 11px;"&gt;связаться с нами&lt;/a&gt; с вопросами по вашей поездке.&lt;/span&gt;
+  &lt;span class="issued" style="font-size: 11px; color: #b2b2b2; display: inline-block;"&gt;Что-то забыли? &lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h7/8vJUS-2BGFnoTYr4SDcohYjBiBeWNe-2FMFI-2FS-2B-2BDRZxsV0-3D" style="color: #b2b2b2 !important; text-decoration: underline; font-size: 11px;"&gt;Определить местоположение.&lt;/a&gt;&lt;/span&gt;
+&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;!-- Line break between tds breaks things --&gt;
+                      &lt;/td&gt;&lt;td class="bottom-box" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: inline-block; width: 319px !important; height: 35px; font-size: 12px; padding: 25px 0 40px;" align="left" valign="top"&gt;
+                        &lt;table class="not-grid" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;"&gt;
+                          &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+                            &lt;td class="share-photo" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 53px; padding: 1px 9px 7px 3px;" align="left" valign="top"&gt;&lt;img id="cid_share_logo" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/give@2x.png" width="34" height="36" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: left; clear: both; display: block; margin: 6px 8px 0 30px;" align="left" /&gt;&lt;/td&gt;
+&lt;td class="help-info" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 300px; line-height: 16px; color: #1fbad6; font-size: 14px; padding: 7px 0 0;" align="left" valign="top"&gt;
+  &lt;table style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; padding: 0;"&gt;
+    &lt;tr style="vertical-align: top; text-align: left; width: 100%; padding: 0;" align="left"&gt;
+      &lt;td class="large-width" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 500px !important; padding: 0;" align="left" valign="top"&gt;
+        &lt;span class="driver-header-text" style="padding-bottom: 5px; display: inline-block;"&gt;Бесплатные поездки&lt;/span&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class="share-section" style="vertical-align: top; text-align: left; width: 100%; display: block; padding: 0;" align="left"&gt;
+      &lt;td class="med-width" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; display: table-cell; width: 63%; padding: 5px 0 0;" align="left" valign="top"&gt;
+        &lt;span class="issued invite" style="font-size: 11px; color: #b2b2b2; display: inline-block;"&gt;
+          &lt;span class="invite-span" style="text-align: left;"&gt;
+              Пригласительный код: 5qguf37gue
+          &lt;/span&gt;
+      &lt;/span&gt;&lt;/td&gt;
+      &lt;td class="sm-width" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: right; display: table-cell; width: 300px; padding: 0;" align="right" valign="top"&gt;
+          &lt;span class="issued share-icon-span" style="font-size: 11px; color: #b2b2b2; display: inline-block; text-align: right;"&gt;
+            &lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h8/9ZtgBbtsz-2BGzBX39C579VL8jv6uB2WC-2F3OpqBvGozeYfdwTybvvPBS5mY-2BeKGp-2FGGbXDMwes6y6-2Bw8nT-2FnJeu6VMVcF7M4Gel-2BH3cnPOSX8-3D" target="_blank" style="color: #b2b2b2 !important; text-decoration: underline; font-size: 11px;"&gt;
+              &lt;img width="8" height="16" class="share-icons" id="cid_share_facebook" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/facebook@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: none; clear: none; display: inline; padding: 3px 0 0 10px; border: none;" align="none" /&gt;
+            &lt;/a&gt;
+            &lt;a href="https://email.uber.com/mpss/c/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/h9/VE2atosPJwyp5yA4oN-2FSarAaKxHd2Ns-2Fy6obzb5E-2FfLgMR52msEl7bvOWqYhRh-2FLTTgTRzwzatjco-2BQ-2B3PzOc1uj44XNrddCGAf-2Fwzz14yQ5566GlNKEo5eUT7DPogIqzBK4gJRGHhGBXkoIzuhgfXgQqjinCms0CbxZjHlp6TTHZJtgksmV5gn73MfEiTiyZV0nyr-2Bs7PI5SToeOwjx0RZzFM1EznQwv-2B2wGOLwSyvLauppy-2BoK-2BWP5vkDVQRAr5BJChPRZj7pTLK7twdQyaAGcvSL59FXABq0I8y026FxasvjoNhg-2BK2hveKio-2FvYDx4myLzPEXrTU7vtXPJbiKBjXbdioihuKFzvaul8M9Jbze4L4LGpS3fsI0qOAIMM1rYeWqoTL9sn5eOkELtZ4cNkuPtNgr8O3qbuHs1uwIpIzYNS9mRUsdUBFWtNNzdHNiaydnR1HD0NXRwxeiWE4IOAcsEPTvCvG6PMkVBDl0bpSFbZEJrlVIK0e5YgpPpzpDXok4TDxr6YqvDqqSZ8eGwb2Qwss8ft4RAxJIhqjL9S9TPSncFgjMCYgDTX6O-2BVB0P3zh94WbtWMP5SO6u28vzBgo6d-2BGW60Hrkn2pwlZoW0HlBKfd6R0Cssz3cTSOWUTP0gJV1uQEVcoR5kCWyqKC-2FDCUJc6k0AVVnNZvnKUeV1kfJuY4xBiYG-2Fg0Glm5eGgpOYNErlj9najuT6tAHrbok8xcE5TjHHrrAB-2Bq1CMpjRSsbgDUU0RIH48n9g71-2FixV9FMXyxQrjLDAg1vyTy2IKKDbYrsPnK8r5f5q6s-2B5I8rK-2FyzXBWAV96LH4Vy-2Fndd0uo9IE0ob5-2F3-2FDlRcmMLC9eySe-2Bgdo-2FvobfuvQm85cY9hSKuzvImBKrfR-2BiYWxeP18h4Z7u2RtVqlsmySiygg-3D-3D" target="_blank" style="color: #b2b2b2 !important; text-decoration: underline; font-size: 11px;"&gt;
+            &lt;img width="17" height="14" class="share-icons" id="cid_share_twitter" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/twitter@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: none; clear: none; display: inline; padding: 3px 0 0 10px; border: none;" align="none" /&gt;
+            &lt;/a&gt;
+            &lt;a href="mailto:?subject=бесплатная поездка Uber (стоимостью до 400 ₽)&amp;body=Я дарю вам бесплатную поездку в приложении Uber (стоимостью до 400 ₽). Чтобы принять ее, зарегистрируйтесь с кодом 5qguf37gue. Наслаждайтесь! Подробности: https://www.uber.com/invite/5qguf37gue" style="color: #b2b2b2 !important; text-decoration: underline; font-size: 11px;"&gt;
+            &lt;img width="20" height="12" class="share-icons" id="cid_share_email" src="http://d1a3f4spazzrp4.cloudfront.net/receipt-new/mail@2x.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; float: none; clear: none; display: inline; padding: 3px 0 0 10px; border: none;" align="none" /&gt;
+          &lt;/a&gt;&lt;/span&gt;
+        
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/td&gt;
+                          &lt;/tr&gt;
+                        &lt;/table&gt;
+                      &lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+  &lt;!-- FILE: driver_signup.html.mako --&gt;
+
+  &lt;!-- FILE: zero_tolerance.html.mako --&gt;
+  &lt;!-- FILE: disclaimer.html.mako --&gt;
+  &lt;table class="container block-grid footer disclaimer-table" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 640px; max-width: 640px; background-color: #1A1B2C; margin: 0 auto 20px; padding: 0; border: 2px solid #2f2f3f;" bgcolor="#1A1B2C"&gt;
+    &lt;tr class="disclaimer-tr" style="vertical-align: top; text-align: center !important; width: 100%; padding: 0;" align="center !important"&gt;
+      &lt;td class="disclaimer-td" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: center !important; display: inline-block; padding: 10px;" align="center !important" valign="top"&gt;
+        &lt;span class="disclaimer-text" style="font-size: 11px; color: #b2b2b2;"&gt;Стоимость не включает комиссию, которая может взиматься Вашим банком. Для получения информации по этому вопросу обратитесь в банк.&lt;/span&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+
+
+
+&lt;!-- FILE: body_end.html.mako --&gt;
+          &lt;/center&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  
+&lt;img src="https://email.uber.com/mpss/o/9gA/STU/t.1yx/qfpaTad6QkSjf2hwDWycXg/o.gif" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/&gt;
+&lt;/body&gt;
+&lt;!-- FILE: html_end.html.mako --&gt;
+&lt;/html&gt;
+</HtmlBody><AttachmentCount>0</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

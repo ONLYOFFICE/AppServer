@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>profi.troll.4test@gmail.com</Email><Name /></From><To><TestAddress><Email>mono.mail.4test@mail.ru</Email><Name>РоманН Бесстрашный</Name></TestAddress></To><Cc /><Subject>test *.mht</Subject><TextCharset>utf-8</TextCharset><TextBody>
+test *.mht
+
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody>&lt;p style="font-family:open sans,sans-serif; font-size:12px; margin: 0;"&gt;test *.mht&lt;/p&gt;
+</HtmlBody><AttachmentCount>48</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

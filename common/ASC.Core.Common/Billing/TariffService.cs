@@ -330,7 +330,7 @@ namespace ASC.Core.Billing
                 if (BillingClient.Configured)
                 {
                     try
-{
+                    {
                         var quotas = QuotaService.GetTenantQuotas();
                         var client = GetBillingClient();
                         foreach (var pi in client.GetPayments(GetPortalId(tenantId)))
@@ -483,7 +483,7 @@ namespace ASC.Core.Billing
             var r = CoreDbContext.Tariffs
                 .Where(r => r.Tenant == tenant)
                 .OrderByDescending(r => r.Id)
-                .SingleOrDefault();
+                .FirstOrDefault();
 
             if (r == null) return Tariff.CreateDefault();
 

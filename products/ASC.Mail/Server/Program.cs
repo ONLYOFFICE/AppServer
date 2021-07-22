@@ -44,6 +44,7 @@ namespace ASC.Mail
                     .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true)
                     .AddJsonFile("storage.json")
                     .AddJsonFile("kafka.json")
+                    .AddJsonFile("mail.json")
                     .AddJsonFile($"kafka.{hostingContext.HostingEnvironment.EnvironmentName}.json", true)
                     .AddEnvironmentVariables()
                     .AddCommandLine(args)

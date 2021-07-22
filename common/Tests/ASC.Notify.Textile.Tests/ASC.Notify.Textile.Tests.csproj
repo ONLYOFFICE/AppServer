@@ -5,14 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ASC.Core.Common\ASC.Core.Common.csproj" />
-    <ProjectReference Include="..\..\ASC.Notify.Textile\ASC.Notify.Textile.csproj" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft\Xamarin\NuGet\nunit\3.12.0\lib\netstandard2.0\nunit.framework.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\ASC.Core.Common\ASC.Core.Common.csproj" />
+    <ProjectReference Include="..\..\ASC.Notify.Textile\ASC.Notify.Textile.csproj" />
   </ItemGroup>
 
 </Project>

@@ -29,7 +29,7 @@ using System.Linq;
 
 using ASC.Common;
 using ASC.Core;
-using ASC.Mail.Resources;
+using ASC.Mail.Core.Resources;
 using ASC.Web.Core;
 using ASC.Web.Mail.Classes;
 
@@ -47,7 +47,7 @@ namespace ASC.Mail.Configuration
         private PathProvider PathProvider { get; }
 
         public ProductEntryPoint(
-            AuthContext authContext, 
+            AuthContext authContext,
             UserManager userManager,
             PathProvider pathProvider)
         {

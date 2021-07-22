@@ -4,34 +4,71 @@
     <TargetFramework>net5.0</TargetFramework>
     <RazorCompileOnBuild>false</RazorCompileOnBuild>
     <GenerateMvcApplicationPartsAssemblyAttributes>false</GenerateMvcApplicationPartsAssemblyAttributes>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <DefaultItemExcludes>$(DefaultItemExcludes);</DefaultItemExcludes>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+      <AssemblyTitle>ASC.Mail</AssemblyTitle>
+    <Company>Ascensio System SIA</Company>
+    <Product>ASC.Mail</Product>
+    <Copyright>(c) Ascensio System SIA. All rights reserved</Copyright>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <NoWarn>1701;1702;NU1701</NoWarn>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="5.0.1" />
+    <Service Include="{7080343D-FBE7-423A-9405-4F883F6E235B}" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DotNetZip" Version="1.15.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.27.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.21" />
+    <PackageReference Include="Ical.Net" Version="4.1.11" />
+    <PackageReference Include="MailKit" Version="2.12.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="MimeKit" Version="2.12.0" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+    <PackageReference Include="Ude.NetStandard" Version="1.2.0" />
+	<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="5.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\..\..\common\ASC.Api.Core\ASC.Api.Core.csproj" />
+    <ProjectReference Include="..\..\..\common\ASC.Common\ASC.Common.csproj" />
+    <ProjectReference Include="..\..\..\common\ASC.Core.Common\ASC.Core.Common.csproj" />
+    <ProjectReference Include="..\..\..\common\services\ASC.ElasticSearch\ASC.ElasticSearch.csproj" />
+    <ProjectReference Include="..\..\..\web\ASC.Web.Core\ASC.Web.Core.csproj" />
+    <ProjectReference Include="..\..\ASC.Files\Server\ASC.Files.csproj" />
+    <ProjectReference Include="..\Core\ASC.Mail.Core.csproj" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <Compile Update="Resources\MailResource.Designer.cs">
+      <DependentUpon>MailResource.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>MailResource.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Update="Resources\MailResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MailResource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\MailResource.ru.resx">
-      <DependentUpon>MailResource.resx</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\MailResource.de.resx">
       <DependentUpon>MailResource.resx</DependentUpon>
     </EmbeddedResource>
@@ -44,6 +81,13 @@
     <EmbeddedResource Update="Resources\MailResource.it.resx">
       <DependentUpon>MailResource.resx</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\MailResource.resx">
+      <LastGenOutput>MailResource.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\MailResource.ru.resx">
+      <DependentUpon>MailResource.resx</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-
+  
 </Project>

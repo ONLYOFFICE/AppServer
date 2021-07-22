@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>MAILER-DAEMON@mailout08.t-online.de</Email><Name>Mail Delivery System</Name></From><To><TestAddress><Email>denis-my@t-online.de</Email><Name /></TestAddress></To><Cc /><Subject>Undelivered Mail Returned to Sender</Subject><TextCharset>us-ascii</TextCharset><TextBody>This is the mail system at host mailout08.t-online.de.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+&lt;zsteben@intercoast.com.au&gt;: host mail.replyingback.com[192.151.147.218] said:
+    450-   450-   450- Greetings 450-   450- We cannot accept mail from your
+    address. 450- For your convenience, below are some links to ads related to
+    topics 450- which may interest you about retirement assistance. 450-   450-
+    http://yourpremierretirementservices.com/?gacq=12 450-   450  Thanks!  (in
+    reply to RCPT TO command)
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody /><AttachmentCount>1</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

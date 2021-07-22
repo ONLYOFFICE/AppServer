@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>MAILER-DAEMON@mx2.teamlab.info</Email><Name>Mail Delivery System</Name></From><To><TestAddress><Email>safronov@teamlab.io</Email><Name /></TestAddress></To><Cc /><Subject>Undelivered Mail Returned to Sender</Subject><TextCharset>us-ascii</TextCharset><TextBody>This is the mail system at host mx2.teamlab.info.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+&lt;test121313233@avs4you.com&gt;: host mail.avs4you.com[107.20.240.212] said: 550
+    Requested action not taken: mailbox unavailable or not local. (in reply to
+    RCPT TO command)
+</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody /><AttachmentCount>2</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

@@ -2,6 +2,7 @@
 using System.Text;
 
 using ASC.Api.Core;
+using ASC.Mail.Controllers;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +25,8 @@ namespace ASC.Mail
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             base.ConfigureServices(services);
+
+            DIHelper.TryAdd<MailController>();
         }
 
         public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)

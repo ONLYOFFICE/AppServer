@@ -1726,6 +1726,15 @@ namespace ASC.Web.Core.PublicResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to no spaces.
+        /// </summary>
+        public static string ErrorPasswordNoSpaces {
+            get {
+                return ResourceManager.GetString("ErrorPasswordNoSpaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to special characters.
         /// </summary>
         public static string ErrorPasswordNoSpecialSymbols {
@@ -1740,6 +1749,15 @@ namespace ASC.Web.Core.PublicResources {
         public static string ErrorPasswordNoUpperCase {
             get {
                 return ResourceManager.GetString("ErrorPasswordNoUpperCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to only latin letters.
+        /// </summary>
+        public static string ErrorPasswordOnlyLatinLetters {
+            get {
+                return ResourceManager.GetString("ErrorPasswordOnlyLatinLetters", resourceCulture);
             }
         }
         
@@ -2064,6 +2082,15 @@ namespace ASC.Web.Core.PublicResources {
         public static string SsoSettingsInvalidMapping {
             get {
                 return ResourceManager.GetString("SsoSettingsInvalidMapping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid authentication token.
+        /// </summary>
+        public static string SsoSettingsNotValidToken {
+            get {
+                return ResourceManager.GetString("SsoSettingsNotValidToken", resourceCulture);
             }
         }
         

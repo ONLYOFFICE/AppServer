@@ -200,7 +200,15 @@ namespace ASC.Core
 
         public string AuthenticateMe(IAccount account, List<Claim> additionalClaims = null)
         {
-            if (account == null || account.Equals(Configuration.Constants.Guest)) throw new InvalidCredentialException("account");
+            if (account == null)
+            {
+                throw new InvalidCredentialException("Failed authentication for account. Account was null.");
+            }
+            if (account.Equals(Configuration.Constants.Guest))
+            {
+                throw new InvalidCredentialException("Failed authentication for account. Guest Account.");
+            }
+
 
             var roles = new List<string> { Role.Everyone };
             string cookie = null;

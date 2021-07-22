@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?><RightParserResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><From><Email>postman@notify.onlyoffice.com</Email><Name>ONLYOFFICE</Name></From><To><TestAddress><Email>mono.mail.4test@gmail.com</Email><Name /></TestAddress></To><Cc /><Subject>Test end-to-end encryption in ONLYOFFICE</Subject><TextCharset>utf-8</TextCharset><TextBody>Test end-to-end encryption in ONLYOFFICE
+Hello!
+The time has come to showcase our pioneering encryption technology. The end-to-end encryption reinforced by blockchain is already available as a developer preview in the new version of ONLYOFFICE Desktop Editors.
+What’s it all about?
+End-to-end encryption mode allows:
+Encrypting files to store them locally or in the cloud.
+Privately editing documents in the cloud.
+Sharing encrypted documents for secure co-editing.
+Key strengths
+Encryption on the client side.
+Documents, including temporary files, are encrypted.
+Encrypted inputs while collaborating on documents online.
+Blockchain technology for reliable password storing and transferring.
+How to start 
+Go ahead and test end-to-end encryption in ONLYOFFICE:
+Install the latest version of ONLYOFFICE Desktop Editors.
+Open the application and go to the Settings.
+Enable the 'Test end-to-end encryption' option.
+Go to the End-to-end encryption tab on the left.
+Enable the encryption mode.
+Read more about how encryption works and how to co-edit documents in the encrypted mode in ONLYOFFICE.
+Please note that this is an exclusive developer preview for public testing. Trying the solution with sensitive documents might put your data at risk.
+
+Install the latest version of ONLYOFFICE Desktop Editors right now for free:
+
+Want to start or join a discussion? Please visit GitHub. If you have any questions or concerns, do not hesitate to contact us at encryption@onlyoffice.com.
+Yours, 
+ONLYOFFICE Team</TextBody><HtmlCharset>utf-8</HtmlCharset><HtmlBody>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;link href='https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&amp;subset=latin,latin-ext' rel="stylesheet" type="text/css" /&gt;
+    &lt;title&gt;Test end-to-end encryption in ONLYOFFICE&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="margin: 0; padding: 0; text-align: center; width: 100%; font-family: Helvetica, Arial, Tahoma; font-size: 14px; color: #000;"&gt;
+
+
+    &lt;table cellspacing="0" cellpadding="0" style="text-align: center; vertical-align: top; width: 100%; margin: 0 auto; padding: 0; border: 0; border-collapse: collapse; border: 0; empty-cells: show; border-spacing: 0;"&gt;
+        &lt;img src='http://www.google-analytics.com/collect?v=1&amp;tid=UA-12442749-5&amp;t=event&amp;cid=mono.mail.4test@gmail.com&amp;cn=Test_end-to-end_encryption_in_ONLYOFFICE&amp;cs=email&amp;ec=Test_end-to-end_encryption_in_ONLYOFFICE&amp;ea=open' width=1 height=1&gt;
+        &lt;tbody&gt;
+            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                &lt;td style="width: 100%; font-size: 16px; vertical-align: top; margin: 0 auto; padding: 0; text-align: center;"&gt;
+                    &lt;table cellspacing="0" cellpadding="0" background="" style="background-position: 0 0;background-repeat: no-repeat;text-align: center;vertical-align: top;width: 600px;height: 0px;margin: 0 auto;padding: 0;border: 0 none;border-collapse: collapse;empty-cells: show;border-spacing: 0;-moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;"&gt;
+                        &lt;tbody&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="vertical-align: top; margin: 0; padding: 0; width: 600px; padding-bottom: 26px; padding-top: 30px; padding-left: 30px; padding-right: 30px;"&gt;
+                                    &lt;p style="width: 600px; margin: 0px auto; text-align: left;"&gt;
+                                        &lt;a href="http://www.onlyoffice.com/" style="text-decoration: none; margin-left:30px;" target="_blank"&gt;
+                                            &lt;!--[if mso]&gt;
+                                                &lt;img src="http://cdn.onlyoffice.com/media/newsletters/august2015/logo-215x35.png" style="border: 0px none; width: 215px; height: 35px;" alt="ONLYOFFICE.com"&gt;
+                                            &lt;![endif]--&gt;
+                                            &lt;!--[if !mso]&gt; &lt;!----&gt;
+                                            &lt;img src="https://download.onlyoffice.com/media/newsletters/november2018/logo.png" style="border: 0px none; width: 215px; height: 35px;" alt="ONLYOFFICE.com"&gt;
+                                                &lt;!-- &lt;![endif]--&gt;
+                                        &lt;/a&gt;
+                                    &lt;/p&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;table cellspacing="0" cellpadding="0" background="" style="background-color: #f6f6f6; background-position: 0 0; background-repeat: no-repeat; text-align: center; vertical-align: top; width: 600px; height: 0px; margin: 0 auto; padding: 0; border: 0 none; border-collapse: collapse;empty-cells: show; border-spacing: 0;-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;"&gt;
+                        &lt;tbody&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="vertical-align: top; margin: 0; padding: 0; width: 600px;"&gt;
+                                    
+                                    &lt;!--[if mso]&gt;
+                                        &lt;p style="-webkit-border-radius: 6px; border-radius: 6px; margin:0px;"&gt; &lt;img style="-webkit-border-top-left-radius: 6px; border-top-right-radius: 6px; -webkit-border-top-right-radius: 6px; border-top-left-radius: 6px;" src="https://cdn.onlyoffice.com/media/newsletters/december2018/news.jpg"/&gt; &lt;/p&gt;
+                                    &lt;![endif]--&gt;
+                                    &lt;!--[if !mso]&gt; &lt;!----&gt;
+                                    &lt;p style="-webkit-border-radius: 6px; border-radius: 6px; margin:0px;"&gt; &lt;img style=" width:600px; -webkit-border-top-left-radius: 6px; border-top-right-radius: 6px; -webkit-border-top-right-radius: 6px; border-top-left-radius: 6px;" src="https://cdn.onlyoffice.com/media/newsletters/december2018/news2x.jpg"/&gt; &lt;/p&gt;
+                                        &lt;!-- &lt;![endif]--&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 16px 30px 6px; margin: 0; font-size: 24px; line-height: 32px; text-align: left; font-weight: 300;" border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 16px 30px 6px; margin: 0; font-size: 22px; line-height: 32px; text-align: left; font-weight: 300;" &gt;
+                                    Test end-to-end encryption in ONLYOFFICE
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Arial; padding: 10px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;" &gt;
+                                    Hello!
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 10px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;" &gt;
+                                    The time has come to showcase our pioneering encryption technology. The end-to-end encryption reinforced by blockchain is already available as a developer preview in the new version of ONLYOFFICE Desktop Editors.
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: 'Open Sans', Arial, Tahoma; padding: 10px 30px 10px; margin: 0; font-size: 16px; text-align: left; line-height: 1.5em; font-weight: 600;" &gt;
+                                    What’s it all about?
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 10px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;" &gt;
+                                    End-to-end encryption mode allows:
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 10px 40px 0; list-style: none;"&gt;
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Encrypting files to store them locally or in the cloud.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt;      
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Privately editing documents in the cloud.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Sharing encrypted documents for secure co-editing.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+
+
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: 'Open Sans', Arial, Tahoma; padding: 10px 30px 10px; margin: 0; font-size: 16px; text-align: left; line-height: 1.5em; font-weight: 600;" &gt;
+                                    Key strengths
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 10px 40px 0; list-style: none;"&gt;
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Encryption on the client side.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt;      
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Documents, including temporary files, are encrypted.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Encrypted inputs while collaborating on documents online.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;&lt;img src="http://d2nlctn12v279m.cloudfront.net/media/newsletters/november2015/green-round.png" alt="green-round"&gt;&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Blockchain technology for reliable password storing and transferring.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+
+
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: 'Open Sans', Arial, Tahoma; padding: 10px 30px 10px; margin: 0; font-size: 16px; text-align: left; line-height: 1.5em; font-weight: 600;" &gt;
+                                    How to start 
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 7px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    Go ahead and test end-to-end encryption in ONLYOFFICE: 
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 10px 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;1.&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Install the &lt;a target="_blank" style="color: #1c7f8d;" href="https://www.onlyoffice.com/download-desktop.aspx"&gt;latest version&lt;/a&gt; of ONLYOFFICE Desktop Editors.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;2.&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Open the application and go to the Settings.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;3.&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Enable the '&lt;b&gt;Test end-to-end encryption&lt;/b&gt;' option.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px;"&gt;4.&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Go to the End-to-end encryption tab on the left.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 0 40px 0; list-style: none;"&gt; 
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="padding-top: 0px; padding-bottom:0px; vertical-align: text-bottom;"&gt;5.&lt;/td&gt;
+                                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; list-style: none; padding-left:5px;"&gt;Enable the encryption mode.&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 20px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    Read more about how &lt;a target="_blank" style="color: #1c7f8d;" href="https://www.onlyoffice.com/onlyoffice-blockchain.aspx"&gt;encryption works&lt;/a&gt; and how to &lt;a target="_blank" style="color: #1c7f8d;" href="https://www.onlyoffice.com/blog/2019/02/end-to-end-encryption/"&gt;co-edit documents&lt;/a&gt; in the encrypted mode in ONLYOFFICE.
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: 'Open Sans', Helvetica, Arial, Tahoma, sans-serif; font-size: 14px; line-height: 1.5em; color: #333333; margin: 0; padding: 15px 0 0 0px; text-align:center;"&gt;
+                                    &lt;table align="center" border="0" cellpadding="0" cellspacing="0" style="-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; margin: 0;"&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                                &lt;td style="width: 106px"&gt;&lt;/td&gt;
+                                                &lt;td style="font-size: 14px; line-height: 1.5em; margin: 0; text-align: center; color: #333; font-family: Helvetica, Arial, Tahoma; padding: 10px; text-align: center; line-height: 1.5em; background-color: #fff; -moz-border-radius: 2px; -webkit-border-radius: 2px; border: 2px solid #c23737; border-radius: 2px; display: inline-block; width: 364px;"&gt;
+                                                    Please note that this is an exclusive developer preview for public testing. Trying the solution with sensitive documents might put your data at risk.
+                                                &lt;/td&gt;
+                                                &lt;td style="width: 106px"&gt;&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 20px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    Install the latest version of ONLYOFFICE Desktop Editors right now for free:
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="font-family: Arial; font-size: 14px; line-height: 1.5em; color: #333; margin: 0; text-align: left; padding: 20px 0 0 0px; list-style: none;"&gt;
+                                    &lt;table&gt;
+                                        &lt;tbody&gt;
+                                            &lt;tr&gt;
+                                                &lt;td style="width: 33%"&gt;&lt;/td&gt;
+                                                &lt;td&gt;
+                                                    &lt;div&gt;
+                                                        &lt;!--[if mso]&gt;
+                                                        &lt;v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.onlyoffice.com/download-desktop.aspx" target="_blank" style="height:38px;v-text-anchor:middle;width:200px; padding-top:6px; box-sizing: border-box;" arcsize="5%" strokecolor="#66b76d" fillcolor="#66b76d"&gt;
+                                                            &lt;w:anchorlock/&gt;
+                                                            &lt;center style=" color:#ffffff;font-family: 'Open Sans', Helvetica, Arial, Tahoma; font-size: 18px;"&gt;DOWNLOAD NOW&lt;/center&gt;
+                                                        &lt;/v:roundrect&gt;
+                                                        &lt;![endif]--&gt;
+                                                        &lt;a href="https://www.onlyoffice.com/download-desktop.aspx" target="_blank" style="padding: 8px 17px; background-color:#66b76d;border:1px solid #66b76d;border-radius:2px;color:#ffffff;display:inline-block; font-family: 'Open Sans', Helvetica, Arial, Tahoma; font-size: 18px; font-weight: 700;text-align:center;text-decoration:none;-webkit-text-size-adjust:none;mso-hide:all;"&gt;DOWNLOAD NOW&lt;/a&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/td&gt;
+                                                &lt;td style="width: 33%"&gt;&lt;/td&gt;
+                                            &lt;/tr&gt;
+                                        &lt;/tbody&gt;
+                                    &lt;/table&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 20px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    Want to start or join a discussion? Please visit &lt;a target="_blank" style="color: #1c7f8d;" href="https://github.com/ONLYOFFICE/e2ee_issues"&gt;GitHub&lt;/a&gt;. If you have any questions or concerns, do not hesitate to contact us at &lt;a target="_blank" style="color: #1c7f8d;" href="mailto:encryption@onlyoffice.com"&gt;encryption@onlyoffice.com&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 20px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    Truly yours,
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 0px 30px 0; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    ONLYOFFICE Team
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="color: #333; font-family: Helvetica, Arial, Tahoma; padding: 0px 30px 50px; margin: 0; font-size: 14px; text-align: left; line-height: 1.5em;"&gt;
+                                    &lt;a style="color: #1c7f8d; font-weight: 600;" target="_blank" href="http://www.onlyoffice.com/"&gt;www.onlyoffice.com&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;table cellspacing="0" cellpadding="0" style="text-align: center; vertical-align: top; width: 250px; height: 36px; margin: auto; padding: 0; border-collapse: collapse; border: 0; border-spacing: 0; "&gt;
+                        &lt;tbody&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://www.facebook.com/pages/OnlyOffice/833032526736775" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/august2015/enterprise/facebook.png" alt="Facebook" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://twitter.com/ONLY_OFFICE" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/august2015/enterprise/twitter.png" alt="Twitter" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://plus.google.com/+Onlyoffice_Community" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/august2015/enterprise/googleplus.png" alt="Google+" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://www.youtube.com/user/onlyofficeTV" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/august2015/enterprise/youtube.png" alt="YouTube" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://vk.com/onlyoffice" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/august2015/enterprise/vk.png" alt="VK" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;td style="width: 50px; vertical-align: top; margin: 0; padding: 0; padding-top: 30px;"&gt;
+                                    &lt;a href="https://www.instagram.com/the_onlyoffice/" style="width: 40px; height: 40px; display: block; margin: 0; padding: 0;" target="_blank"&gt;
+                                        &lt;img src="https://d2nlctn12v279m.cloudfront.net/media/newsletters/images/social-inst-40.png" alt="Instagram" style="width: 40px; height: 40px; border: 0;"&gt;
+                                    &lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;table cellspacing="0" cellpadding="0" style="text-align: center; vertical-align: top; width: 600px; height: 91px; margin: 0 auto; padding: 0; border-collapse: collapse; border: 0; empty-cells: show; border-spacing: 0;"&gt;
+                        &lt;tbody&gt;
+                            &lt;tr border="0" cellspacing="0" cellpadding="0"&gt;
+                                &lt;td style="width: 600px; vertical-align: top; margin: 0; padding: 20px 30px 25px;"&gt;
+                                    &lt;p style="color: #7b7b7b; font-family: 'Open Sans', 'Open Sans', Arial, Tahoma; font-size: 12px; margin: 0; text-align: center;"&gt;
+                                        This email is generated automatically and you do not need to answer it.
+                                        &lt;br&gt;You receive this email because you are a registered user of &lt;a href="https://www.onlyoffice.com" style="color: #7b7b7b;" target="_blank"&gt;onlyoffice.com&lt;/a&gt;.                       
+                                        &lt;br&gt;If you no longer wish to receive these emails, click on the following link: &lt;a href="https://www.onlyoffice.com/Unsubscribe.aspx?id=ChJ1QpHtwup5cnQWgf9bXmkZws8VB_Ozh4prWo007t01&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=test_e2e_encryption_in_onlyoffice" style="color: #7b7b7b;" target="_blank"&gt;Unsubscribe&lt;/a&gt;
+                                    &lt;/p&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                    &lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlBody><AttachmentCount>0</AttachmentCount><UnknownPatsCount>0</UnknownPatsCount></RightParserResult>

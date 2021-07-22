@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package ASC.Mail.Core.Engine;
+
+message AccountCacheItem {
+    string key = 1;
+}

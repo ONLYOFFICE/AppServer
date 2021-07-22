@@ -143,7 +143,7 @@ namespace ASC.Common
         }
 
         public void RegisterProducts(IConfiguration configuration, string path)
-            {
+        {
             var types = AutofacExtension.FindAndLoad(configuration, path);
 
             foreach (var t in types)
@@ -158,9 +158,9 @@ namespace ASC.Common
         }
 
         public bool TryAdd<TService, TImplementation>() where TService : class
-            {
+        {
             return TryAdd(typeof(TService), typeof(TImplementation));
-            }
+        }
 
         public bool TryAdd(Type service, Type implementation = null)
         {
@@ -174,7 +174,7 @@ namespace ASC.Common
                 if (service == null)
                 {
                     return false;
-        }
+                }
             }
 
             var serviceName = $"{service}{implementation}";
@@ -189,18 +189,18 @@ namespace ASC.Common
             var isnew = false;
 
             if (di != null)
-        {
-                if (di.Additional != null)
             {
+                if (di.Additional != null)
+                {
                     var m = di.Additional.GetMethod("Register", BindingFlags.Public | BindingFlags.Static);
                     m.Invoke(null, new[] { this });
-            }
+                }
 
                 if (!service.IsInterface || implementation != null)
                 {
                     isnew = implementation != null ? Register(service, implementation) : Register(service);
                     if (!isnew) return false;
-        }
+                }
 
                 if (service.IsInterface && implementation == null || !service.IsInterface)
                 {
@@ -218,19 +218,19 @@ namespace ASC.Common
                                 var b = a.GetGenericArguments();
 
                                 foreach (var g in b)
-        {
+                                {
                                     if (g != service)
-            {
+                                    {
                                         TryAdd(g);
                                         if (service.IsInterface && di.Implementation == null)
                                         {
                                             TryAdd(service, g);
-            }
+                                        }
                                     }
                                 }
 
                                 TryAdd(a, di.Service);
-        }
+                            }
                             else
                             {
                                 Type c = null;
@@ -238,20 +238,20 @@ namespace ASC.Common
                                 var b = a.GetGenericArguments().FirstOrDefault();
 
                                 if (b != null && b.IsGenericType)
-        {
+                                {
                                     var b1 = b.GetGenericTypeDefinition().MakeGenericType(service.GetGenericArguments());
 
                                     TryAdd(b1);
                                     c = a1.MakeGenericType(b1);
                                 }
                                 else
-            {
+                                {
                                     c = a1.MakeGenericType(service.GetGenericArguments());
-            }
+                                }
 
                                 TryAdd(c, di.Service.MakeGenericType(service.GetGenericArguments()));
                                 //a, di.Service
-        }
+                            }
                         }
                         else
                         {
@@ -269,14 +269,14 @@ namespace ASC.Common
                     }
 
                     if (di.Implementation != null)
-        {
+                    {
                         var a = di.Implementation.GetInterfaces().FirstOrDefault(x => x.IsGenericType &&
                         (x.GetGenericTypeDefinition() == typeof(IConfigureOptions<>) ||
                         x.GetGenericTypeDefinition() == typeof(IPostConfigureOptions<>) ||
                         x.GetGenericTypeDefinition() == typeof(IOptionsMonitor<>))
                         );
                         if (a != null)
-            {
+                        {
                             if (!a.ContainsGenericParameters)
                             {
                                 var b = a.GetGenericArguments();
@@ -289,12 +289,12 @@ namespace ASC.Common
                                         if (service.IsInterface && implementation == null)
                                         {
                                             TryAdd(service, g);
-            }
+                                        }
                                     }
                                 }
 
                                 TryAdd(a, di.Implementation);
-        }
+                            }
                             else
                             {
                                 Type c = null;
@@ -302,20 +302,20 @@ namespace ASC.Common
                                 var b = a.GetGenericArguments().FirstOrDefault();
 
                                 if (b != null && b.IsGenericType)
-        {
+                                {
                                     var b1 = b.GetGenericTypeDefinition().MakeGenericType(service.GetGenericArguments());
 
                                     TryAdd(b1);
                                     c = a1.MakeGenericType(b1);
                                 }
                                 else
-            {
+                                {
                                     c = a1.MakeGenericType(service.GetGenericArguments());
-            }
+                                }
 
                                 TryAdd(c, di.Implementation.MakeGenericType(service.GetGenericArguments()));
                                 //a, di.Service
-        }
+                            }
                         }
                         else
                         {
@@ -326,13 +326,13 @@ namespace ASC.Common
             }
 
             if (isnew)
-        {
+            {
                 ConstructorInfo[] props = null;
 
                 if (!service.IsInterface)
-            {
+                {
                     props = service.GetConstructors();
-            }
+                }
                 else if (implementation != null)
                 {
                     props = implementation.GetConstructors();
@@ -348,7 +348,7 @@ namespace ASC.Common
                     foreach (var p1 in par)
                     {
                         TryAdd(p1.ParameterType);
-        }
+                    }
                 }
             }
 
@@ -357,7 +357,7 @@ namespace ASC.Common
 
         private bool Register(Type service, Type implementation = null)
         {
-            if (service.IsSubclassOf(typeof(ControllerBase))|| service.GetInterfaces().Contains(typeof(IResourceFilter)) || service.GetInterfaces().Contains(typeof(IDictionary<string, string>))) return true;
+            if (service.IsSubclassOf(typeof(ControllerBase)) || service.GetInterfaces().Contains(typeof(IResourceFilter)) || service.GetInterfaces().Contains(typeof(IDictionary<string, string>))) return true;
             var c = service.IsGenericType && (
                 service.GetGenericTypeDefinition() == typeof(IConfigureOptions<>) ||
                 service.GetGenericTypeDefinition() == typeof(IPostConfigureOptions<>) ||
