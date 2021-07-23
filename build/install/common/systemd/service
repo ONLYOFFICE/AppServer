@@ -3,8 +3,7 @@ Description=AppServer-${SERVICE_NAME}
 After=network.target syslog.target
 
 [Service]
-PIDFile=/run/appserver/appserver-${SERVICE_NAME}.pid
-Type=simple
+Type=notify
 User=onlyoffice
 Group=onlyoffice
 WorkingDirectory=${WORK_DIR}
