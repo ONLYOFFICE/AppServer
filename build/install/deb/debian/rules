@@ -1,0 +1,126 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+export DH_OPTIONS=-v
+
+%:
+	dh $@ --with=systemd
+
+PRODUCT=appserver
+CURRENT_PATH=${CURDIR}
+BUILD_PATH=var/www
+SRC_PATH=$(shell cd ../../../; pwd)
+SCRIPT_PATH=build/install/common
+
+override_dh_auto_clean:
+	@echo "RULES.$@"
+	dh_testdir 
+	rm -rf ${CURRENT_PATH}/src
+	rm -rf ${CURRENT_PATH}/debian/*.service
+	rm -rf ${SRC_PATH}/build/install/${PRODUCT}*
+
+override_dh_auto_configure:
+	@echo "RULES.$@"
+	dh_testdir 
+	dh_auto_configure
+
+override_dh_auto_build:
+	mkdir -p ${CURRENT_PATH}/src/${BUILD_PATH}
+	cd ${SRC_PATH}/${SCRIPT_PATH}/systemd; \
+	bash build.sh -bp "${CURRENT_PATH}/debian/"; \
+	cd ${SRC_PATH}/${SCRIPT_PATH}; \
+	bash build-frontend.sh -sp ${SRC_PATH}; \
+	bash build-backend.sh -sp ${SRC_PATH} -ar "--disable-parallel"; \
+	bash publish-backend.sh -sp ${SRC_PATH} -bp ${CURRENT_PATH}/src/${BUILD_PATH} -ar "--disable-parallel"
+
+	sed -i "s@var/www@var/www/${PRODUCT}@g" ${SRC_PATH}/config/nginx/*.conf 
+	sed -i "s@var/www@var/www/${PRODUCT}@g" ${SRC_PATH}/config/nginx/includes/*.conf
+	
+override_dh_auto_install:
+	
+	## Proxy-Nginx ##
+	@echo "AppServer.$@"
+	
+	## ASC.ApiSystem ##
+	@echo "ASC.ApiSystem.$@"
+	dh_installinit    --name=${PRODUCT}-api-system
+	
+	## ASC.Data.Backup ##
+	@echo "ASC.Data.Backup.$@"
+	dh_installinit    --name=${PRODUCT}-backup
+
+    ## ASC.Calendar ##
+	@echo "ASC.Calendar.$@"
+	dh_installinit    --name=${PRODUCT}-calendar
+
+	## ASC.CRM ##
+	@echo "ASC.CRM.$@"
+	dh_installinit    --name=${PRODUCT}-crm
+
+	## ASC.Data.Storage.Encryption ##
+	@echo "ASC.Data.Storage.Encryption.$@"
+	dh_installinit    --name=${PRODUCT}-storage-encryption
+
+	## ASC.Files ##
+	@echo "ASC.Files.$@"
+	dh_installinit    --name=${PRODUCT}-files
+
+	## ASC.Files.Service ##
+	@echo "ASC.Files.Service.$@"
+	dh_installinit    --name=${PRODUCT}-files-services
+
+	## ASC.Mail ##
+	@echo "ASC.Mail.$@"
+	dh_installinit    --name=${PRODUCT}-mail
+
+	## ASC.Data.Storage.Migration ##
+	@echo "ASC.Data.Storage.Migration.$@"
+	dh_installinit    --name=${PRODUCT}-storage-migration
+
+	## ASC.Notify ##
+	@echo "ASC.Notify.$@"
+	dh_installinit    --name=${PRODUCT}-notify
+
+	## ASC.People ##
+	@echo "ASC.People.$@"
+	dh_installinit    --name=${PRODUCT}-people-server
+
+	## ASC.Projects ##
+	@echo "ASC.Projects.$@"
+	dh_installinit    --name=${PRODUCT}-projects-server
+
+	## ASC.Socket.IO.Svc ##
+	@echo "ASC.Socket.IO.Svc.$@"
+	dh_installinit    --name=${PRODUCT}-socket
+
+	## ASC.Studio.Notify ##
+	@echo "ASC.Studio.Notify.$@"
+	dh_installinit    --name=${PRODUCT}-studio-notify
+
+	## ASC.TelegramService ##
+	@echo "ASC.TelegramService.$@"
+	dh_installinit    --name=${PRODUCT}-telegram-service
+
+	## ASC.Thumbnails.Svc ##
+	@echo "ASC.Thumbnails.Svc.$@"
+	dh_installinit    --name=${PRODUCT}-thumbnails
+
+	## ASC.UrlShortener.Svc ##
+	@echo "ASC.UrlShortener.Svc.$@"
+	dh_installinit    --name=${PRODUCT}-urlshortener
+
+	## ASC.Web.Api ##
+	@echo "ASC.Web.Api.$@"
+	dh_installinit    --name=${PRODUCT}-api
+
+	## ASC.Web.Studio ##
+	@echo "ASC.Web.Studio.$@"
+	dh_installinit    --name=${PRODUCT}-studio
+
+override_dh_strip:
+#	dh_strip --exclude=/site-packages/
+
+override_dh_shlibdeps:
+#	dh_shlibdeps --exclude=/site-packages/

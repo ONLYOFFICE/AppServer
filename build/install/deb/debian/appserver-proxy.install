@@ -1,0 +1,17 @@
+## COPY PUBLIC ##
+../../../config/nginx/*.conf                    etc/nginx/conf.d
+../../../config/nginx/includes/*.conf           etc/nginx/includes
+../../../public/*                               var/www/appserver/public
+../../../public/images/*                        var/www/appserver/public/images
+../../../public/offline/*                       var/www/appserver/public/offline
+../../../public/thirdparty/*                    var/www/appserver/public/thirdparty
+../../../products/ASC.Calendar/Client/dist/*    var/www/appserver/products/ASC.Calendar/client
+../../../products/ASC.CRM/Client/dist/*         var/www/appserver/products/ASC.CRM/client
+../../../products/ASC.Projects/Client/dist/*    var/www/appserver/products/ASC.Projects/client
+../../../products/ASC.Calendar/Client/dist/*    var/www/appserver/products/ASC.Calendar/client
+../../../products/ASC.People/Client/dist/*      var/www/appserver/products/ASC.People/client
+../../../products/ASC.Mail/Client/dist/*        var/www/appserver/products/ASC.Mail/client
+../../../products/ASC.Files/Client/dist/*       var/www/appserver/products/ASC.Files/client
+../../../web/ASC.Web.Editor/dist/*              var/www/appserver/products/ASC.Files/editor
+../../../web/ASC.Web.Client/dist/*              var/www/appserver/studio/client
+../../../web/ASC.Web.Login/dist/*               var/www/appserver/studio/login

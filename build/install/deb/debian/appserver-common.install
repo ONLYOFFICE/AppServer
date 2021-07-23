@@ -1,0 +1,3 @@
+../../../config/*.json      etc/onlyoffice/appserver
+../../../config/*.config    etc/onlyoffice/appserver
+../docker/config/*.sql      var/www/appserver/sql

@@ -5,7 +5,7 @@ ENVIRONMENT="production"
 APP_DIR="/etc/onlyoffice/${PRODUCT}"
 USER_CONF="$APP_DIR/appsettings.$ENVIRONMENT.json"
 NGINX_CONF="/etc/nginx/conf.d"
-SYSTEMD_DIR="/etc/systemd/system"
+SYSTEMD_DIR="/lib/systemd/system"
 
 MYSQL=""
 DB_HOST=""
@@ -180,7 +180,7 @@ restart_services() {
 	sed -i "s/ENVIRONMENT=.*/ENVIRONMENT=$ENVIRONMENT/" $SYSTEMD_DIR/${PRODUCT}*.service >/dev/null 2>&1
 	systemctl daemon-reload
 
-	for SVC in nginx mysqld ${PRODUCT}-api ${PRODUCT}-api-system ${PRODUCT}-urlshortener ${PRODUCT}-thumbnails \
+	for SVC in nginx mysql* ${PRODUCT}-api ${PRODUCT}-api-system ${PRODUCT}-urlshortener ${PRODUCT}-thumbnails \
 	${PRODUCT}-socket ${PRODUCT}-studio-notify ${PRODUCT}-notify ${PRODUCT}-people-server ${PRODUCT}-files \
 	${PRODUCT}-files-services ${PRODUCT}-studio ${PRODUCT}-backup ${PRODUCT}-storage-encryption \
 	${PRODUCT}-storage-migration ${PRODUCT}-projects-server ${PRODUCT}-telegram-service ${PRODUCT}-crm \
@@ -235,7 +235,7 @@ establish_mysql_conn(){
 	$MYSQL -e ";" >/dev/null 2>&1
 	ERRCODE=$?
 	if [ $ERRCODE -ne 0 ]; then
-		systemctl mysqld start >/dev/null 2>&1
+		systemctl mysql* start >/dev/null 2>&1
 		$MYSQL -e ";" >/dev/null 2>&1 || { echo "FAILURE"; exit 1; }
 	fi
 
@@ -253,28 +253,44 @@ mysql_check_connection() {
 }
 
 change_mysql_config(){
-	local CNF_PATH="/etc/my.cnf";
-    local CNF_SERVICE_PATH="/usr/lib/systemd/system/mysqld.service";
-
-    if ! grep -q "\[mysqld\]" ${CNF_PATH}; then
-		CNF_PATH="/etc/my.cnf.d/server.cnf";
+	if [ "$DIST" = "RedHat" ]; then
+	
+		local CNF_PATH="/etc/my.cnf";
+		local CNF_SERVICE_PATH="/usr/lib/systemd/system/mysqld.service";
 
 		if ! grep -q "\[mysqld\]" ${CNF_PATH}; then
-			exit 1;
-		fi
-	fi 
+			CNF_PATH="/etc/my.cnf.d/server.cnf";
 
-	if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then
-		CNF_SERVICE_PATH="/lib/systemd/system/mysqld.service";
-
-		if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then
-			CNF_SERVICE_PATH="/lib/systemd/system/mariadb.service";
-				
-			if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then 
+			if ! grep -q "\[mysqld\]" ${CNF_PATH}; then
 				exit 1;
 			fi
+		fi 
+
+		if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then
+			CNF_SERVICE_PATH="/lib/systemd/system/mysqld.service";
+
+			if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then
+				CNF_SERVICE_PATH="/lib/systemd/system/mariadb.service";
+					
+				if ! grep -q "\[Unit\]" ${CNF_SERVICE_PATH}; then 
+					exit 1;
+				fi
+			fi
+		fi 
+
+	elif [ "$DIST" = "Debian" ]; then
+
+		sed "s/#max_connections.*/max_connections = 1000/" -i /etc/mysql/my.cnf || true # ignore errors
+
+		CNF_PATH="/etc/mysql/mysql.conf.d/mysqld.cnf";
+		CNF_SERVICE_PATH="/lib/systemd/system/mysql.service";
+
+		if mysql -V | grep -q "MariaDB"; then
+			CNF_PATH="/etc/mysql/mariadb.conf.d/50-server.cnf";
+			CNF_SERVICE_PATH="/lib/systemd/system/mariadb.service";
 		fi
-	fi 
+
+	fi
 
     sed '/skip-networking/d' -i ${CNF_PATH} || true # ignore errors
 
@@ -319,21 +335,25 @@ change_mysql_config(){
 	else
 		sed "s/default-authentication-plugin.*/default-authentication-plugin = mysql_native_password/" -i ${CNF_PATH} || true # ignore errors
 	fi
-		
-	if ! grep -q "^LimitNOFILE"  ${CNF_SERVICE_PATH}; then
-		sed '/\[Service\]/a LimitNOFILE = infinity' -i ${CNF_SERVICE_PATH}
-	else
-		sed "s/LimitNOFILE.*/LimitNOFILE = infinity/" -i ${CNF_SERVICE_PATH} || true # ignore errors
-	fi
 
-	if ! grep -q "^LimitMEMLOCK"  ${CNF_SERVICE_PATH}; then
-		sed '/\[Service\]/a LimitMEMLOCK = infinity' -i ${CNF_SERVICE_PATH}
-	else
-		sed "s/LimitMEMLOCK.*/LimitMEMLOCK = infinity/" -i ${CNF_SERVICE_PATH} || true # ignore errors
+	if [ -e ${CNF_SERVICE_PATH} ]; then
+		
+		if ! grep -q "^LimitNOFILE"  ${CNF_SERVICE_PATH}; then
+			sed '/\[Service\]/a LimitNOFILE = infinity' -i ${CNF_SERVICE_PATH}
+		else
+			sed "s/LimitNOFILE.*/LimitNOFILE = infinity/" -i ${CNF_SERVICE_PATH} || true # ignore errors
+		fi
+
+		if ! grep -q "^LimitMEMLOCK"  ${CNF_SERVICE_PATH}; then
+			sed '/\[Service\]/a LimitMEMLOCK = infinity' -i ${CNF_SERVICE_PATH}
+		else
+			sed "s/LimitMEMLOCK.*/LimitMEMLOCK = infinity/" -i ${CNF_SERVICE_PATH} || true # ignore errors
+		fi
+	
 	fi
 
     systemctl daemon-reload >/dev/null 2>&1
-	systemctl restart mysqld >/dev/null 2>&1
+	systemctl restart mysql* >/dev/null 2>&1
 }
 
 execute_mysql_script(){
@@ -436,14 +456,16 @@ setup_docs() {
 	'url': {'public': '/ds-vpath/','internal': \"http://${DOCUMENT_SERVER_HOST}:${DOCUMENT_SERVER_PORT}\",'portal': \"http://$APP_HOST:$APP_PORT\"}}}" >/dev/null 2>&1
 	
 	#Enable ds-example autostart
-	sudo sed 's,autostart=false,autostart=true,' -i /etc/supervisord.d/ds-example.ini
-	sudo supervisorctl start ds:example >/dev/null 2>&1
+	sed 's,autostart=false,autostart=true,' -i /etc/supervisord.d/ds-example.ini >/dev/null 2>&1 || sed 's,autostart=false,autostart=true,' -i /etc/supervisor/conf.d/ds-example.conf >/dev/null 2>&1
+	supervisorctl start ds:example >/dev/null 2>&1
 	
 	echo "OK"
 }
 
 change_elasticsearch_config(){
-	local ELASTIC_SEARCH_VERSION=$(rpm -qi elasticsearch | grep Version | tail -n1 | awk -F': ' '/Version/ {print $2}');
+
+	systemctl stop elasticsearch
+
 	local ELASTIC_SEARCH_CONF_PATH="/etc/elasticsearch/elasticsearch.yml"
 	local ELASTIC_SEARCH_JAVA_CONF_PATH="/etc/elasticsearch/jvm.options";
 
@@ -496,6 +518,8 @@ change_elasticsearch_config(){
 	if [ -d /etc/elasticsearch/ ]; then 
 		chmod g+ws /etc/elasticsearch/
 	fi
+
+	systemctl start elasticsearch
 }
 
 setup_elasticsearch() {
@@ -511,7 +535,7 @@ setup_elasticsearch() {
 
 setup_kafka() {
 
-	local KAFKA_SERVICE=$(systemctl --type=service | grep 'kafka' | tr -d '●' | awk '{print $1;}')
+	KAFKA_SERVICE=$(systemctl --type=service | grep 'kafka' | tr -d '●' | awk '{print $1;}')
 
 	if [ -n ${KAFKA_SERVICE} ]; then
 
@@ -548,23 +572,35 @@ setup_kafka() {
 
 }
 
+if command -v yum >/dev/null 2>&1; then
+	DIST="RedHat"
+	PACKAGE_MANAGER="rpm -q"
+elif command -v apt >/dev/null 2>&1; then
+	DIST="Debian"
+	PACKAGE_MANAGER="dpkg -l"
+	mkdir -p /var/log/onlyoffice/appserver/
+	chown -R onlyoffice:onlyoffice /var/www/appserver/
+	chown -R onlyoffice:onlyoffice /var/log/onlyoffice/appserver/
+	chown -R onlyoffice:onlyoffice /etc/onlyoffice/appserver/
+fi
+
 install_json
 
-if rpm -q mysql-community-client >/dev/null; then
+if $PACKAGE_MANAGER mysql-client >/dev/null 2>&1 || $PACKAGE_MANAGER mysql-community-client >/dev/null 2>&1; then
     input_db_params
     establish_mysql_conn || exit $?
     execute_mysql_script || exit $?
 fi 
 
-if rpm -q nginx >/dev/null; then
+if $PACKAGE_MANAGER nginx >/dev/null 2>&1; then
     setup_nginx
 fi
 
-if rpm -q onlyoffice-documentserver >/dev/null || rpm -q onlyoffice-documentserver-de >/dev/null || rpm -q onlyoffice-documentserver-ee >/dev/null; then
+if $PACKAGE_MANAGER onlyoffice-documentserver >/dev/null 2>&1 || $PACKAGE_MANAGER onlyoffice-documentserver-de >/dev/null 2>&1 || $PACKAGE_MANAGER onlyoffice-documentserver-ee >/dev/null 2>&1; then
     setup_docs
 fi
 
-if rpm -q elasticsearch >/dev/null; then
+if $PACKAGE_MANAGER elasticsearch >/dev/null 2>&1; then
     setup_elasticsearch
 fi
 

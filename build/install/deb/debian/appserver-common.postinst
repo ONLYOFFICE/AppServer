@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# see: dh_installdeb(1)
+
+set -e
+
+if ! cat /etc/passwd | grep -q "onlyoffice:"; then
+	adduser --quiet --home /var/www/appserver --system --group onlyoffice
+fi
+		
+if ! cat /etc/group | grep -q "nginx:"; then
+	addgroup --quiet --system nginx
+fi
+		
+if ! cat /etc/passwd | grep -q "nginx:"; then
+	adduser --quiet --system nginx
+	usermod -aG nginx nginx
+fi
+
+usermod -aG onlyoffice,nginx onlyoffice

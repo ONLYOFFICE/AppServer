@@ -1,0 +1,2 @@
+src/var/www/services/ASC.Thumbnails.Svc/service/*   var/www/appserver/services/ASC.Thumbnails.Svc
+src/var/www/services/ASC.Thumbnails/service/*       var/www/appserver/services/ASC.Thumbnails

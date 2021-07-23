@@ -1,0 +1,221 @@
+Source: appserver
+Section: web
+Priority: optional
+Maintainer: onlyoffice
+Build-Depends: debhelper (>= 10), nodejs (>=10), dotnet-sdk-5.0, yarn
+Standards-Version: 0.1-10
+Homepage: https://www.onlyoffice.com/
+Architecture: any
+
+Package: appserver
+Architecture: any
+Depends: appserver-api-system,
+         appserver-backup,
+         appserver-calendar,
+         appserver-crm,
+         appserver-storage-encryption,
+         appserver-files,
+         appserver-files-services,    
+         appserver-mail,
+         appserver-storage-migration,
+         appserver-notify,
+         appserver-people-server,
+         appserver-projects-server,
+         appserver-socket,
+         appserver-studio-notify,
+         appserver-telegram-service,
+         appserver-thumbnails,
+         appserver-urlshortener,
+         appserver-api,
+         appserver-studio,
+         appserver-proxy
+Description: Description
+
+Package: appserver-common
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Description
+
+Package: appserver-configuration
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Description
+
+Package: appserver-api-system
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-backup
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-calendar
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-crm
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-storage-encryption
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-files
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-files-services
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-mail
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-storage-migration
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-notify
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-people-server
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-projects-server
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-socket
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ nodejs (>=10),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-studio-notify
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-telegram-service
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-thumbnails
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ nodejs (>=10),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-urlshortener
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ nodejs (>=10),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-api
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-studio
+Architecture: any
+Depends: appserver-common,
+ appserver-configuration,
+ dotnet-sdk-5.0,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Description
+
+Package: appserver-proxy
+Architecture: any
+Depends: nginx, ${misc:Depends}, ${shlibs:Depends}
+Description: Description

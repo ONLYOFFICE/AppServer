@@ -8,7 +8,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-api.service
+lib/systemd/system/%{product}-api.service
 %dir %{buildpath}/studio/
 %dir %{buildpath}/products/ASC.People/
 %dir %{buildpath}/products/ASC.People/server/
@@ -26,7 +26,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-backup.service
+lib/systemd/system/%{product}-backup.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
@@ -53,7 +53,7 @@
 %{buildpath}/products/ASC.People/server/ASC.People*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-files-services.service
+lib/systemd/system/%{product}-files-services.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
 %dir %{buildpath}/products/ASC.People/server
@@ -71,7 +71,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-notify.service
+lib/systemd/system/%{product}-notify.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
@@ -89,7 +89,7 @@
 %{buildpath}/products/ASC.People/server/ASC.People.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-files.service
+lib/systemd/system/%{product}-files.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
 %dir %{buildpath}/products/ASC.People/
@@ -102,7 +102,7 @@
 %files api-system
 %defattr(-, onlyoffice, onlyoffice, -)
 %{buildpath}/services/ASC.ApiSystem/
-%{_sysconfdir}/systemd/system/%{product}-api-system.service
+lib/systemd/system/%{product}-api-system.service
 %dir %{buildpath}/services/
 
 %files proxy
@@ -135,7 +135,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-studio-notify.service
+lib/systemd/system/%{product}-studio-notify.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
@@ -153,7 +153,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-people-server.service
+lib/systemd/system/%{product}-people-server.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
 %dir %{buildpath}/products/ASC.Files/
@@ -167,14 +167,14 @@
 %defattr(-, onlyoffice, onlyoffice, -)
 %{buildpath}/services/ASC.UrlShortener/
 %{buildpath}/services/ASC.UrlShortener.Svc/
-%{_sysconfdir}/systemd/system/%{product}-urlshortener.service
+lib/systemd/system/%{product}-urlshortener.service
 %dir %{buildpath}/services/
 
 %files thumbnails
 %defattr(-, onlyoffice, onlyoffice, -)
 %{buildpath}/services/ASC.Thumbnails/
 %{buildpath}/services/ASC.Thumbnails.Svc/
-%{_sysconfdir}/systemd/system/%{product}-thumbnails.service
+lib/systemd/system/%{product}-thumbnails.service
 %dir %{buildpath}/services/
 
 %files socket
@@ -185,7 +185,7 @@
 %{buildpath}/products/ASC.People/server/
 %{buildpath}/products/ASC.CRM/server/
 %{buildpath}/products/ASC.Projects/server/
-%{_sysconfdir}/systemd/system/%{product}-socket.service
+lib/systemd/system/%{product}-socket.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
@@ -200,7 +200,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-studio.service
+lib/systemd/system/%{product}-studio.service
 %dir %{buildpath}/studio/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.People/
@@ -219,7 +219,7 @@
 %{buildpath}/products/ASC.People/server/ASC.People.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-storage-encryption.service
+lib/systemd/system/%{product}-storage-encryption.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
@@ -238,7 +238,7 @@
 %{buildpath}/products/ASC.People/server/
 %{buildpath}/products/ASC.CRM/server/
 %{buildpath}/products/ASC.Projects/server/
-%{_sysconfdir}/systemd/system/%{product}-storage-migration.service
+lib/systemd/system/%{product}-storage-migration.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
@@ -252,7 +252,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll 
 %{buildpath}/products/ASC.People/server/ASC.People.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
-%{_sysconfdir}/systemd/system/%{product}-projects-server.service
+lib/systemd/system/%{product}-projects-server.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
 %dir %{buildpath}/products/ASC.Files/server/
@@ -269,7 +269,7 @@
 %{buildpath}/products/ASC.People/server/ASC.People.dll
 %{buildpath}/products/ASC.CRM/server/ASC.CRM*.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-telegram-service.service
+lib/systemd/system/%{product}-telegram-service.service
 %dir %{buildpath}/services/
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Files/
@@ -287,7 +287,7 @@
 %{buildpath}/products/ASC.Files/server/ASC.Files*.dll
 %{buildpath}/products/ASC.People/server/ASC.People.dll
 %{buildpath}/products/ASC.Projects/server/ASC.Projects*.dll
-%{_sysconfdir}/systemd/system/%{product}-crm.service
+lib/systemd/system/%{product}-crm.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.CRM/
 %dir %{buildpath}/products/ASC.Files/
@@ -298,13 +298,13 @@
 %files calendar
 %defattr(-, onlyoffice, onlyoffice, -)
 %{buildpath}/products/ASC.Calendar/server/
-%{_sysconfdir}/systemd/system/%{product}-calendar.service
+lib/systemd/system/%{product}-calendar.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Calendar/
 
 %files mail
 %defattr(-, onlyoffice, onlyoffice, -)
 %{buildpath}/products/ASC.Mail/server/
-%{_sysconfdir}/systemd/system/%{product}-mail.service
+lib/systemd/system/%{product}-mail.service
 %dir %{buildpath}/products/
 %dir %{buildpath}/products/ASC.Mail/
